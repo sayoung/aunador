@@ -1,0 +1,5 @@
+name: appel offre Homepage
+type: module
+description: appel offre Homepage.
+core_version_requirement: ^9.3 || ^10
+package: AU

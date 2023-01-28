@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }} id="instruction_ro" >
+  {{- product|without('variation_attributes') -}}
+</article>
+
+<script type="text/javascript">
+ var $ = jQuery.noConflict();
+// $(".form-item-combine-1").find("#edit-submit").empty().append("Régler la prestation")
+document.getElementById('edit-submit').value = 'Régler la prestation';
+</script>

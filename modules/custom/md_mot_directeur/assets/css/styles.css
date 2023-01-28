@@ -1,0 +1,80 @@
+.col.col-md-12.titleMD {
+    text-align: center;
+    margin-top: 25px;
+}
+.imageMD img {
+    border-radius: 50%;
+    height: 350px;
+    width: 350px !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titleMD h4 {
+    color: white;
+    font-weight: normal;
+    font-size: 22px;
+    font-family: 'lato', sans-serif;
+    width: 53%;
+    margin-left: 23%;
+    text-align: center;
+    margin-top: -13px;
+    line-height: 23px;
+}
+.titleMD h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 31px;
+    font-family: 'Montserrat', sans-serif;
+    width: 60%;
+    margin-left: 23%;
+    text-align: left;
+    margin-top: -13px;
+    line-height: 32px;
+}
+div#block-motdirecteurblock--2 {
+    text-align: center;
+    color: white;
+}
+div#block-motdirecteurblock--2 h2 {
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.col.col-md-8.textMD p {
+    background-color: #2077c300 !important;
+}
+.col.col-md-8.textMD {
+    overflow-y: hidden;
+    text-align: justify;
+    font-size: 1.3em;
+}
+div#block-motdirecteurblock h2 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.row.motDirecteur {
+    /* background-color: white; */
+    padding: 9px 1px 1px;
+    /* border: #63AADC 11px solid; */
+    width: 101% !important;
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 32.9vh; */
+    overflow: hidden;
+}
+@media only screen and (max-width: 640px) {
+    div#block-auer-agendahpblock {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    div#block-auer-agendahpblock {
+    }
+}
+@media only screen and (max-width: 1500px) {
+    div#block-auer-agendahpblock {
+    }
+}

@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{% set base_url = url('<front>')|render|split('/', -1)|join('/') %}/themes/au/assets/css/contact.css">
+<body>
+    <div id="wrapper">
+        {% include directory ~ '/templates/extra/header.html.twig' %}
+        <main id="main" role="main" class="py-5 bg-light">
+            
+                <div class="container">
+                    <div class="row">
+                            
+                        
+                        <div class="col-md-12">
+			                {{ page.content }}
+                        </di>
+                    </di>
+                </di>
+           
+		</main>
+        {% include directory ~ '/templates/extra/footer.html.twig' %}
+    </div>
+</body>	

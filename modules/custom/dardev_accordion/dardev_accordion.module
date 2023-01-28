@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Custom functions for Views Bootstrap.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\dardev_accordion\ViewsAccordion;
+use Drupal\views\ViewExecutable;
+/**
+ * Implements hook_theme().
+ */
+function dardev_accordion_theme() {
+  return ViewsAccordion::getThemeHooks();
+}
+
+
+
+function dardev_accordion_views_pre_render(ViewExecutable $view) {
+
+  if (isset($view) && ($view->storage->id() == 'accordionn') && ($view->element['#display_id'] == 'eventpage') ){
+    
+    $view->element['#attached']['library'][] = 'dardev_accordion/dardev-accordion';
+    }
+  
+}
+
+
+
+
+function dardev_accordion_preprocess(&$variables) {
+  $variables['lang'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $lang_code         = \Drupal::languageManager()->getCurrentLanguage()->getId();
+ }

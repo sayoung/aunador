@@ -1,0 +1,26 @@
+ <div class="row">
+     {% set lang = cur_lang %}
+    
+     
+                <div class="col-md-6 col-12">
+				<h2 class="desktop-h2">
+				    {% trans %}Agence urbaine
+de Nador<br/>
+Driouch<br/>
+Guercif
+{% endtrans %}
+				
+				</h2>
+				<h3 class="desktop-h3">
+				<a href="{{ url('<front>') }}/videos">{% trans %}en videos{% endtrans %}</a>
+				</h3>
+				
+			
+				</div>
+				 {% for node in video_hp %}
+				<div class="col-md-6 col-12 {{ node.label }} f01">
+				<a class="video-popup-trigger" href="https://www.youtube.com/watch?v={{ node.field_video.0.value }}"><img class="destop-youtube" src="{{ base_path ~ directory }}/images/desktop.png"></a><br>
+{% endfor %}
+				</div>
+				</div>
+				

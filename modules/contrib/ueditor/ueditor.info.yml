@@ -1,0 +1,11 @@
+name: UEditor
+type: module
+description: "UEditor for rich text fields."
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - drupal:editor
+
+# Information added by Drupal.org packaging script on 2022-09-29
+version: '8.x-2.3'
+project: 'ueditor'
+datestamp: 1664465895

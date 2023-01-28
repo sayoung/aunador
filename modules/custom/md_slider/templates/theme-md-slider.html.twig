@@ -1,0 +1,26 @@
+ {% set lang = cur_lang %}
+<!--Carousel Wrapper-->
+<div id="carousel-example-2" class="banner-area blog-slider-active-home{% if lang == "ar" %}-rtl{% endif %} slider-navigation-style-2" >
+
+  <!--Slides-->
+
+  
+  {% set j = 0 %}
+      {% for slide in sliders %}
+	 
+    <div class="banner fullscreen jarallax"  data-black-overlay="7" style="background: url({{ file_url(slide.field_photo_.entity.fileuri) }}) center; background-repeat: no-repeat;background-size: cover;" >
+	
+      
+      <div class="carousel-caption" >
+        <h3 class="h3-responsive">{% if slide.hastranslation(lang) %}{{ slide.translation(lang).label }}{% else %}
+    {% trans %}  No translation {% endtrans %}
+    {% endif %}</h3>
+    <h3 class="lire-responsive"> <a href="{{ path('entity.node.canonical', {'node': slide.id}) }}"> {% trans %}  Lire la suite {% endtrans %}</a></h3>
+      </div>
+    </div>
+	{% set j = j + 1 %}
+      {% endfor %}
+  </div>
+  <!--/.Slides-->
+
+<!--/.Carousel Wrapper-->

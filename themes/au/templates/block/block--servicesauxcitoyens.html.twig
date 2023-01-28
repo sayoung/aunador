@@ -1,0 +1,40 @@
+<section class="small-block">
+    <div class="container">
+        <div class="row">
+            
+                            {% for key, value in content.field_services %}
+                            
+                            {% set titre = value['#paragraph'].field_titre.getValue()  %}
+                            {% set bg = value['#paragraph'].field_image  %}
+							{% set lien = value['#paragraph'].field_lien  %}
+                            {% if key >= '0'   %}
+                           
+                                        <div class="col-12 col-lg-3 px-0">
+                <div class="img-holder">
+                    <img src="{{file_url(bg.entity.uri.value)}}" alt="">
+                    <div class="text bg-ser-{{key}}" > 
+                        <h3 style="color: #70c4ca;">{{titre.0.value|render|striptags }}</h3>
+                    </div>
+                    <div class="text2 bg-ser-{{key}}" > 
+                        
+                        
+                        <h4 style="color: #70c4ca;">
+                            {% for link_service in lien %}
+                            <a href="{{link_service.url}}">{{link_service.title}} </a>
+                            {% endfor %}
+                        </h4>
+                        
+                      
+                    </div>    
+                </div>
+            </div>
+                            
+            {% endif %}
+
+                            {% endfor %}
+                            
+
+
+        </div>
+    </div>
+</section>

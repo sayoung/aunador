@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains tq_slider.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\tq_slider\Newsletter\Newsletter;
+
+/**
+ * Implements hook_help().
+ */
+function tq_slider_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tq_slider module.
+    case 'help.page.tq_slider':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Description: Slider for homepage.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+
+function tq_slider_theme($existing, $type, $theme, $path)
+{
+  return array(
+      'theme_tq_slider' => array(
+          'variables' => array('sliders' => NULL),
+          'template' => 'theme-tq-slider'
+      ),
+  );
+}

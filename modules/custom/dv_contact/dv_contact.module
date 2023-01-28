@@ -1,0 +1,131 @@
+<?php
+
+/**
+ * @file
+ * Contains dv_contact.module..
+ */
+require_once '/opt/drupal/vendor/autoload.php';
+//require __DIR__ . '/vendor/autoload.php';
+use Twilio\Rest\Client;
+use Drupal\dv_contact\Helper\Helper;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\Unicode;
+use Drupal\Core\Mail\MailFormatHelper;
+use Drupal\Core\Site\Settings;
+use Drupal\KernelTests\KernelTestBase;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
+use Drupal\commerce_product\Entity\ProductInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+
+
+/**
+ * Implements hook_help().
+ */
+function dv_contact_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dv_contact module.
+    case 'help.page.dv_contact':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('send an email programmatically After contact creation') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function dv_contact_node_presave(Drupal\node\NodeInterface $node) {
+    $moderation = $node->get('moderation_state')->target_id;
+	if ($moderation === 'traitement' || $moderation === 'to_client' || $moderation === 'annulation' || $moderation === 'archived'  )  {
+$node->set('field_cheking', 0);
+}
+if ($moderation === 'verification' )  {
+$node->set('field_cheking', 1);
+}
+ // $node->set('field_cheking', 0);
+}
+function dv_contact_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+
+ 
+ if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'contact')) {
+    return;
+  }
+      $moderation = $entity->get('moderation_state')->target_id;
+    
+        $isSMS = $entity->get('field_is_sms')->value;
+		$phone_numbre = $entity->get('field_telephone_')->value;
+        $commnetaire = $entity->get('field_observations')->value;
+        $name = $entity->get('field_nom_prenom_d_architecte')->value;
+	    $mail = $entity->get('field_email_')->value;
+        $code = $entity->get('field_uuid')->value;
+        $date_propose = $entity->get('field_date_de_naissance_')->value;
+        $isChekced = $entity->get('field_cheking')->value;
+        $num_phone = "+212" .  $phone_numbre ;
+        
+
+  
+ // Helper::sendSMS($num_phone, $entity->get('moderation_state')->target_id );
+if ($moderation === 'to_client') {
+	// public static function sendMailPropositionRdv($to, $code,$commnetaire ,$title, $date_rdv){
+//	Helper::sendSMS_Proposition_Rdv($num_phone,$code );
+	Helper::sendMailPropositionRdv($mail, $code,$commnetaire , 'AUNADOR : Demande de rendez-vous', $date_propose, $name);
+	Helper::sendMailPropositionRdv_cci($mail, $code,$commnetaire , 'AUNADOR : Demande de rendez-vous', $date_propose ,$name);
+}
+if (($entity->get('moderation_state')->target_id ) === 'archived') {
+    $motif = $entity->get('field_motif')->value ;
+
+}
+}
+
+/**  
+ * Implements hook_mail().
+*/
+
+function dv_contact_mail($key, &$message, $params) {
+ $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'contact_insrt':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('AUNADOR : Demande de rendez-vous');
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_mail_alter().
+ */
+
+/**
+ * Implements hook_entity_insert().
+ */
+function dv_contact_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+
+  if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'contact')) {
+    return;
+  }
+      $moderation = $entity->get('moderation_state')->target_id;
+    
+        $isSMS = $entity->get('field_is_sms')->value;
+		$phone_numbre = $entity->get('field_telephone_')->value;
+        $commnetaire = $entity->get('field_observations')->value;
+        $name = $entity->get('field_nom_prenom_d_architecte')->value;
+	    $mail = $entity->get('field_email_')->value;
+        $code = $entity->get('field_uuid')->value;
+        $date_propose = $entity->get('field_date_de_naissance_')->value;
+        $isChekced = $entity->get('field_cheking')->value;
+        $num_phone = "+212" .  $phone_numbre ;
+
+ //   Helper::sendSMS_confirmation($num_phone,$code );
+	Helper::sendMail_Confirmation($mail, $code, 'AUNADOR : Demande de rendez-vous', $name);
+	Helper::sendMail_Confirmation_cci($mail, $code, 'AUNADOR : Demande de rendez-vous', $name);
+
+
+}
+ 
+  

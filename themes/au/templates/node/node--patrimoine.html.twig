@@ -1,0 +1,85 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+
+<!-- Start Display article for teaser page -->
+
+{% if view_mode == 'teaser' %}
+
+  <div class="portfolio-v1">      
+    <div class="portfolio-content">
+      <div class="images lightGallery">
+        {{ content.field_gallerier }}
+        <a class="link" href="{{ url }}"><i class="fa fa-link"></i></a>
+      </div>
+      <div class="content-inner">
+        <div class="portfolio-information">
+          <div class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </div>
+          <div class="category">{{content.field_portfolio_tags}}</div>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+{% elseif view_mode == 'teaser_2' %}
+  <div class="portfolio-v2">      
+    <div class="portfolio-content">
+      <div class="images lightGallery">
+        {{ content.field_gallerier }}
+        <a class="link" href="{{ url }}"><i class="fa fa-link"></i></a>
+      </div>
+      <div class="content-inner"> <div class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </div><div class="category">{{content.field_portfolio_tags}}</div></div>    
+    </div>
+  </div>
+{% else %}
+
+<!-- Start Display article for detail page -->
+{% set xcol = "col-md-12 col-sm-12 col-xs-12"  %}
+{% if informations %}
+  {% set xcol = "col-md-6 col-sm-12 col-xs-12"  %}
+{% endif %} 
+
+ 
+<article{{ attributes.addClass(classes).addClass('node-detail') }}>
+  <div class="post-block portfolio-single ">
+       <div class="row">
+      <div class="{{xcol}}">    {{ title_prefix }}
+        <div  class="field field--name-title-text field--type-string ">{{ label }}</div>
+	
+      {{ title_suffix }}  
+	        </div>
+    </div> 
+    <div class="row" id="patrimoine">
+      <div class="{{xcol}}"> 
+        <div class="pg-portfolio-thumbs{% if cur_language == "ar" %}-rtl{% endif %} slider-navigation-style-1">
+          {% if content.field_gallerier %}
+            {{ content.field_gallerier }} 
+          {% endif %}
+        </div>
+      </div>
+    </div> 
+     
+    <div class="post-content pt-4">
+
+      <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+        {{ content|without('field_gallerier','field_portfolio_tags', 'field_portfolio_information', 'comment' , 'label') }}
+      </div>
+
+     
+
+    </div>
+
+  </div>
+
+</article>
+
+<!-- End Display article for detail page -->
+{% endif %}

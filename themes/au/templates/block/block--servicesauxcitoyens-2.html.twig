@@ -1,0 +1,26 @@
+<div class="wrap">
+    {% for key, value in content.field_services %}
+                            
+    {% set titre = value['#paragraph'].field_titre.getValue()  %}
+    {% set bg = value['#paragraph'].field_image  %}
+    {% set lien = value['#paragraph'].field_lien  %}
+    {% if key >= '0'   %}
+    <div class="card">
+        <div class="card-pic-wrap bg-ser-{{key}}">
+            <img src="{{file_url(bg.entity.uri.value)}}" alt="{{titre.0.value|render|striptags }}">
+        </div>
+        <div class="card-content">
+          <h3>{{titre.0.value|render|striptags }}</h3>
+          <p>
+          {% for link_service in lien %}
+          <a class="link" href="{{link_service.url}}">{{link_service.title}}</a>
+          {% endfor %}
+        </p>
+        </div>
+    </div>
+    {% endif %}
+
+                            {% endfor %}
+
+  </div>
+  

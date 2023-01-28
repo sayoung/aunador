@@ -1,0 +1,5 @@
+name: dardev_dashbord
+type: module
+description: developer les tableau de bord.
+core_version_requirement: ^9.3 || ^10
+package: Custom

@@ -1,0 +1,7 @@
+name: dardev_slider
+type: module
+description: 'Ce module developer par DARDEV pour INRA.'
+package: INRA
+core_version_requirement: ^8.8.0 || ^9 || ^10
+dependencies:
+  - drupal:views

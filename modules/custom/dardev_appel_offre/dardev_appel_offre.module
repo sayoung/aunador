@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains dardev_appel_offre.module.
+ */
+use Drupal\block\Entity\Block;
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\dardev_appel_offre\Newsletter\Newsletter;
+
+/**
+ * Implements hook_help().
+ */
+function dardev_appel_offre_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dardev_appel_offre module.
+    case 'help.page.dardev_appel_offre':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Collect emails and send newsletter to newsletter.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function dardev_appel_offre_theme_suggestions_newsletter(array $variables) {
+
+  $suggestions = [];
+  $suggestions[] = 'hookname__' . $variables['form']->form['#build_id'];
+
+  
+  return $suggestions;
+}
+

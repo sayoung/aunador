@@ -1,0 +1,13 @@
+name: CKEditor Bootstrap Tools
+type: module
+description: CKEditor Bootstrap Tools by JS+. https://js.plus/products/bootstrap-tools
+package: CKEditor
+# core: 8.x
+dependencies:
+  - ckeditor
+  - ckeditor_bootstrap_include
+
+version: '8.x-1.7'
+core: '8.x'
+project: 'ckeditor_bootstrap_tools'
+datestamp: 1544259128010

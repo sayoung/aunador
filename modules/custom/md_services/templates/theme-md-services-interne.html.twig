@@ -1,0 +1,22 @@
+<nav class="service-interne">
+  <ul>
+          {% for node in sliders %}
+   <li class="var_nav">
+      <div class="link_bg"></div>
+      <div class="link_title">
+        <div class=icon> 
+        <i class="{{ node.service_icon_service }}"></i>
+        </div>
+        <div class=dsec> 
+        <h3>{{ node.service_title }}</h3>
+        <div class=dsec-det> 
+        {% if node.service_link_title_1 %}<a href="{{ node.service_link_1 }}" ><span>{{ node.service_link_title_1 }}</span></a>{%  endif %}
+        {% if node.service_link_title_2 %}<a href="{{ node.service_link_2 }}" ><span>{{ node.service_link_title_2 }}</span></a>{%  endif %}
+        {% if node.service_link_title_3 %}<a href="{{ node.service_link_3 }}" ><span>{{ node.service_link_title_3 }}</span></a>{%  endif %}
+      </div>
+      </div>
+      </div>
+   </li>
+    {% endfor %}
+  </ul>
+</nav>

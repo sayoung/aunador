@@ -1,0 +1,91 @@
+{% if is_mobile() %}
+<div class="container" id="galerie_mobile">
+  <div class="card">
+    <div class="card-body">
+      <div class="row gx-2 align-items-end">
+        <div class="col-8">
+          <div class="image-gallery-text mb-4">
+            <h3 class="mb-0">{{'Galerie'|t}}</h3>
+            <p class="mb-0">{{'Photos Vidéos'|t}}</p>
+          </div>
+        </div>
+        <div class="col-4 text-end"><a class="btn btn-primary btn-sm mb-4" href="#">{{'Voir Plus +'|t}}</a></div>
+      </div>
+      
+      <div class="image-gallery-slides-wrapper">
+        <div class="image-gallery-carousel">
+         
+          <!-- Single Image Gallery -->
+          {% for key, row in rows  %}
+          {% set img = row.image|render|striptags %}
+          <div>
+            <div class="single-gallery-item">
+             <img src="{% if row.image %}{{img}}{% endif %}" alt="ee">
+             <a class="fav-icon shadow" href="javascript:void(0)"><i class="bi bi-heart-fill"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+<div class="gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+  <figure class="gallery__item--0 text-center gallery-item horizontal" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+    <h2 class="text-uppercase encodeblod text-gal p-0 mb-0">{{'Galerie'|t}}  </h2>
+    <h3 class="text-uppercase encoderegular text-white p-0 mb-0">{{'Photos Vidéos'|t}}  </h3>
+   </figure>
+{% for key, row in rows  %}
+{% set key_1 = key + 1 %}
+  <figure class="gallery__item--{{key_1}} gallery-item horizontal" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+  <a href="javascript:void(0)" itemprop="contentUrl" data-size="2000x1000">
+    {% set img = row.image|render|striptags %}
+    <img class="gallery-item lazypreload" src="{% if row.image %}{{img}}{% endif %}" itemprop="thumbnail" data-src="{% if row.image %}{% apply spaceless %}{{img}}{% endapply %}{% endif %}" alt=" {{row.title|render|striptags}} DARDEV"/></a>
+      <figcaption class="gallery-caption" itemprop="caption description">{{row.title|render|striptags}}</figcaption>
+  </figure>
+ {% endfor %}
+ <figure class="gallery__item--7 gallery-item horizontal" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+  <div class="text-center w-200 mt-3">
+  <a href="javascript:void(0)" class="btn encodeblod text-uppercase text-white">{{'Voir Plus +'|t}} </a>
+</div>
+ </figure>
+</div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">   
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+      

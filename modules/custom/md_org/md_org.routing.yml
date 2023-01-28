@@ -1,0 +1,7 @@
+md_org.admin_org:
+  path: '/admin/config/services/md_org'
+  defaults:
+    _form: '\Drupal\md_org\Form\BlocConfigForm'
+    _title: 'Block org'
+  requirements:
+    _permission: 'administer site configuration'

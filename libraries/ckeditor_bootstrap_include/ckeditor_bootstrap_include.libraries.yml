@@ -1,0 +1,10 @@
+ckeditor_bootstrap_include.admin:
+  version: 1.x
+  js:
+    js/ckeditor_bootstrap_include.admin.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupal.vertical-tabs
+    - core/drupalSettings

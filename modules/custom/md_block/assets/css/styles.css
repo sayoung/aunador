@@ -1,0 +1,194 @@
+.blog-item-vert-1 {
+	background-color:#38343f ;
+	height: 100%;
+	border-radius: 100px;
+}
+.blog-item-vert-2 {
+	background-color:#38343f ;
+	height: 100%;
+	border-radius: 100px;
+}
+.blog-item-vert-3 {
+	background-color:#38343f ;
+	height: 100%;
+	border-radius: 100px;
+}
+.blog-item-vert-4 {
+	background-color:#38343f ;
+	height: 100%;
+	border-radius: 100px;
+}
+.blog-item-vert-5 {
+	background-color:#38343f ;
+	height: 100%;
+	border-radius: 100px;
+}
+.blog-item-vert-6 {
+	background-color:#38343f ;
+	height: 100%;
+	border-radius: 100px;
+}
+.blog-item-vert-1 a , .blog-item-vert-2 a , .blog-item-vert-3 a  , .blog-item-vert-4 a {color:#54bac0 ;}
+.blog-item-vert-1:hover , .blog-item-vert-2:hover , .blog-item-vert-3:hover  , .blog-item-vert-4:hover {background-color:#459f52 ;}
+[class^="blog-item-vert-"]:hover {
+	opacity:1;
+	}
+[class^="blog-item-vert-"] a i {
+	font-size: 57px;
+	margin-left: 50px;
+	color:#fff;
+	}
+[class^="blog-item-vert-"]:hover a i {
+	font-size: 57px;
+	margin-left: 50px;
+	color:#fff;
+	}
+#bg_block_section .cr-navigation-prev {
+	left: calc((100% - 50px)/2) !important;
+top: 0 !important;
+right: unset;
+  background: #8bc3c4;
+  color: white;
+  opacity: 1;
+  visibility: visible;
+}
+
+#bg_block_section .cr-navigation-next {
+    right: unset !important;
+    left: calc((100% - 50px)/2) !important;
+    bottom: 0 !important;
+	top: unset !important;
+  background: #8bc3c4;
+  color: white;
+  opacity: 1;
+  visibility: visible;
+}
+/*
+div[class^="blog-item-vert"] h6.h6 {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  padding-left: 50px;
+padding-top: calc((100% - 90px ));
+width: calc(100% - 100px);
+display: table-cell;
+vertical-align: middle;
+text-transform: uppercase;
+}
+*/
+.blog-item-vert-1 h6.h6 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding-left: 50px;
+padding-top: 60px;
+width: calc(100% - 100px);
+display: table-cell;
+vertical-align: middle;
+text-transform: uppercase;
+}
+.blog-item-vert-2 h6.h6 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding-left: 50px;
+padding-top: 60px;
+width: calc(100% - 100px);
+display: table-cell;
+vertical-align: middle;
+text-transform: uppercase;
+}
+.blog-item-vert-3 h6.h6 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding-left: 50px;
+padding-top: 60px;
+width: calc(100% - 100px);
+display: table-cell;
+vertical-align: middle;
+text-transform: uppercase;
+}
+.blog-item-vert-4 h6.h6 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding-left: 50px;
+padding-top: 60px;
+width: calc(100% - 100px);
+display: table-cell;
+vertical-align: middle;
+text-transform: uppercase;
+}
+.blog-item-vert-1:hover h6.h6 , .blog-item-vert-2:hover h6.h6 , .blog-item-vert-3:hover h6.h6 , .blog-item-vert-4:hover h6.h6 {
+    color:white;
+}
+.p-up {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.p-down {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.slider-navigation-style-1 .cr-navigation {
+  visibility: visible;
+}
+.slider-navigation-style-1 .cr-navigation:hover {
+  background: #8bc3c4;
+  color: #ffffff;
+}
+
+
+[dir="rtl"]  div[class^="blog-item-vert"] h6.h6 {
+  font-size: 20px;
+  color: white;
+  padding-right: 50px;
+  padding-left: unset;
+  padding-top: 80px;
+  text-align: right;
+}
+[dir="rtl"] .md-accordion .card .fa-angle-down {
+    float: left;
+}
+#block-mdblockblock-2 .cr-section {
+    height: calc(100vh - 101px);
+}
+#block-mdblockblock-2 .container , #block-mdblockblock-2 #bg_block_section {
+    height:100%
+}
+.blog-item-ver {
+    height: 20vh;
+margin: 1vh 0;
+}
+.region-md-bloc {
+  width: 80%;
+margin: auto;  
+}
+@media (max-width: 1680px){
+.blog-item-vert-1 h6.h6 {
+    padding-top: 60px;
+}
+.blog-item-vert-2 h6.h6 {padding-top: 55px;}
+.blog-item-vert-3 h6.h6 {padding-top: 52px;}
+.blog-item-vert-4 h6.h6 {padding-top: 57px;}
+}
+@media (max-width: 1366px){
+#block-mdblockblock-2 .cr-section { height: calc(100vh - 90px);}
+.blog-item-vert-1 h6.h6 {padding-top: 43px;}
+.blog-item-vert-2 h6.h6 {padding-top: 43px;}
+.blog-item-vert-3 h6.h6 {padding-top: 40px;}
+.blog-item-vert-4 h6.h6 {padding-top: 44px;}
+}
+[dir="rtl"] [class^="blog-item-vert-"] a i {
+    font-size: 57px;
+    margin-right: 50px;
+	margin-left: 40px;
+	width: 80px;
+}
+@media (max-width: 1366px){
+.region-md-bloc {
+    width: 90%;
+    margin: auto;
+}
+}

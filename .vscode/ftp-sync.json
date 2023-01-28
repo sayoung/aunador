@@ -1,0 +1,29 @@
+{
+    "remotePath": "./au.dardev.ma/web/",
+    "host": "145.239.140.154",
+    "username": "dardevma",
+    "password": "[R18@s9lMIbj6O",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\vendor",
+        "\\sites",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
+}

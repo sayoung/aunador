@@ -1,0 +1,84 @@
+{#
+/**
+ * @file
+ * Two column template for the product add/edit form.
+ *
+ * Available variables:
+ * - form: The form.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set roles = user.getroles(TRUE) %}
+
+
+{% if roles[0] == "technicien_e_prestation" %}
+<div id="id_v_pai" class="{{ roles[0] }}"> <h2>Valider le paiement </h2></div>
+<div class="layout-product-form clearfix hide-varia" id="technicien-e-prestation">
+  <div class="layout-region layout-region-product-main">
+    {{ form|without('advanced', 'footer', 'actions') }}
+  </div>
+  <div class="layout-region layout-region-product-secondary">
+    {{ form.advanced }}
+  </div>
+  <div class="layout-region layout-region-product-footer">
+    <div class="layout-region-product-footer__content">
+      {{ form.footer }}
+      {{ form.actions }}
+    </div>
+  </div>
+</div>
+{% elseif roles[0] == "comptable" %} 
+<div> <h2>Calculer le dossier</h2></div>
+
+<!-- <p>merci de nous laisser vos coordonnées grâce au formulaire ci-dessous.</p> -->
+<div class="layout-product-form clearfix hide-varia" id="comptableprsta">
+  <div class="layout-region layout-region-product-main">
+    {{ form|without('advanced', 'footer', 'actions') }}
+  </div>
+  <div class="layout-region layout-region-product-secondary">
+    {{ form.advanced }}
+  </div>
+  <div class="layout-region layout-region-product-footer">
+    <div class="layout-region-product-footer__content">
+      {{ form.footer }}
+      {{ form.actions }}
+    </div>
+  </div>
+</div>
+{% elseif roles[0] == "prestation" %} 
+<div id="id_v_pai" class="{{ roles[0] }}"> <h2>Valider le paiement </h2></div>
+
+<!-- <p>merci de nous laisser vos coordonnées grâce au formulaire ci-dessous.</p> -->
+<div class="layout-product-form clearfix hide-varia" id="technicien-e-prestation">
+  <div class="layout-region layout-region-product-main">
+    {{ form|without('advanced', 'footer', 'actions') }}
+  </div>
+  <div class="layout-region layout-region-product-secondary">
+    {{ form.advanced }}
+  </div>
+  <div class="layout-region layout-region-product-footer">
+    <div class="layout-region-product-footer__content">
+      {{ form.footer }}
+      {{ form.actions }}
+    </div>
+  </div>
+</div>
+{% else %} 
+<div id="id_v_pai" class="{{ roles[0] }}" > <h2>Demander le Calcul</h2></div>
+<p>Veuillez remplir ces champs.</p>
+<div class="layout-product-form clearfix hide-varia" id="other-presta">
+  <div class="layout-region layout-region-product-main">
+    {{ form|without('advanced', 'footer', 'actions') }}
+  </div>
+  <div class="layout-region layout-region-product-secondary">
+    {{ form.advanced }}
+  </div>
+  <div class="layout-region layout-region-product-footer">
+    <div class="layout-region-product-footer__content">
+      {{ form.footer }}
+      {{ form.actions }}
+    </div>
+  </div>
+</div>
+{% endif %}

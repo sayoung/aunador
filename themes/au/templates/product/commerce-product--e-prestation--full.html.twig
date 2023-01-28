@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *  - {{ kint(product_entity)}}
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }} id="regle-dossier">
+
+{% if product.variation_price['#object'] is not null %}
+  <h2 class="view-head">{% trans %}Régler un dossier{% endtrans %}</h2>
+  {% endif %}  
+
+ 
+  {% if product.field_nom_prenom_ %}
+  {{ product.field_nom_prenom_ }}
+  {% endif %}
+    {% if product.field_num_doss %}
+  {{ product.field_num_doss }}
+  {% endif %}
+   {% if product.field_avis_pref %}
+  {{ product.field_avis_pref }}
+  {% endif %}
+  {% if product.field_adresse %}
+  {{ product.field_adresse }}
+  {% endif %}
+  {% if product.field_commission %}
+  {{ product.field_commission }}
+  {% endif %}
+{% if product.field_architecte %}
+  {{ product.field_architecte }}
+  {% endif %}
+  
+ 
+    {% if product.field_consistance %}
+  {{ product.field_consistance }}
+  {% endif %}
+  {% if product.field_avis_de_la_l_auem %}
+  {{ product.field_avis_de_la_l_auem }}
+  {% endif %}
+  {% if product.field_metrage %}
+  {{ product.field_metrage }}
+  {% endif %}
+   {% if product.field_remuneration %}
+  {{ product.field_remuneration }}
+  {% endif %}
+  
+{{ product.field_remuneration.name  }}
+{{ product_attribute_value.field_remuneration  }}
+
+
+
+  {% if product.variation_price %}
+  {{ product.variation_price }}
+  {% endif %}
+  
+  {% set val_price = price|number_format(0, '.', ',') %}
+{% set  vlt = product_entity.field_remuneration.value  %}
+
+   {% if val_price >= 1 and vlt == 'oui' %}
+  {{ product.variations }}
+  {% endif %}  
+ 
+</article>

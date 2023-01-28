@@ -1,0 +1,11 @@
+<div class="sidebar-title">
+	<h4>{{ view.getTitle()|raw }}</h4>
+</div>
+
+<div class="single-item-carousel owl-theme owl-carousel">
+	{% for key, row in rows   %}
+	{% set imgg = row.image|striptags|raw %}
+	{% set url = row.url|striptags|raw %}
+		<figure class="image"><a target="_blank" href="{% apply spaceless %}{{url}}{% endapply %}"><img src="{% apply spaceless %}{{imgg}}{% endapply %}" alt=""></a></figure>
+	{% endfor %}
+</div>

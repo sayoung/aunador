@@ -1,0 +1,9 @@
+name: Required API
+description: Provides an unified API to managed required property on fields.
+type: module
+core_version_requirement: ^8.8 || ^9
+
+# Information added by Drupal.org packaging script on 2021-10-07
+version: '8.x-1.3'
+project: 'required_api'
+datestamp: 1633617845

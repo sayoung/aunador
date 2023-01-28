@@ -1,0 +1,11 @@
+name: Required by role
+description: Provides checkboxes for each field to set the required property for that field per role.
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - required_api:required_api
+
+# Information added by Drupal.org packaging script on 2021-10-07
+version: '8.x-1.1'
+project: 'required_by_role'
+datestamp: 1633619233

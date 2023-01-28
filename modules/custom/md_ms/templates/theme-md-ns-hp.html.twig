@@ -1,0 +1,30 @@
+<!-- Blog Area -->
+ {% set lang = cur_lang %}
+<section class="md_ns" id="md_ms">
+    
+     {% set lang = cur_lang %}
+    <main class="ms">
+	<div class="section-title">
+			<h2>{{ ns_title }}</h2>
+							</div>
+	{% for node in nodes %}
+	  <div class="cont_ms">
+    <div class="content-ms">
+	<h5 class="color-white p-2">
+	    	{% if node.hastranslation(lang) %}
+                   {% set body = node.translation(lang).body.0.value|render|striptags %}
+				    
+      {{ body|length > 70 ? body|slice(0, 70) ~ '...' : body }}
+	</h5>
+	 {% else %}
+     <p>No translation</p>
+    {% endif %}
+
+     
+      <button class="btn"><a class="clr-noir" href="{{ path('entity.node.canonical', {'node': node.id}) }}">{% trans %}en savoir plus{% endtrans %}</a></button>
+	 
+    </div>
+  </div>
+{% endfor %}
+   </main>   
+</section>

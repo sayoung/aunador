@@ -1,0 +1,45 @@
+name: au
+type: theme
+base theme: classy
+description: 'ce project cree pour notre client Agence Urbaine de meknes'
+package: Core
+core_version_requirement: ^8 || ^9
+# version: VERSION
+# core: 8.x
+libraries:
+  - au/global-styling
+
+regions:
+  social: 'Social'
+  search: 'Search'
+  branding: 'Branding'
+  langue: 'Langue'
+  menu: 'Menu'
+  menu_mb: 'Menu mobile'
+  slide: 'Slide'
+  newshp: 'News HP'
+  map: 'Map'
+  video: 'Video'
+  agenda: 'Agenda'
+  services: 'Services'
+  services_interne: 'services interne'
+  services_mobile: 'services mobile'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  adresse: 'Adresse'
+  appel_offre: 'appel_offre'
+  newsletter: 'Newsletter'
+  menu_footer: 'menu footer'
+  md_bloc: 'les 6 bloc'
+  md_block_contact: 'md_block_contact'
+  another: 'another'
+  panier: 'panier'
+  breadcrumbs: 'breadcrumbs'
+  mission_hp: 'mission_hp'
+  menu_user: 'Menu user connecté'
+  md: 'Mot du directeur'
+
+# Information added by Drupal.org packaging script on 2020-05-02
+version: '8.8.5'
+core: '8.x'
+project: 'drupal'

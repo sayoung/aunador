@@ -1,0 +1,118 @@
+.md_ms {
+height: 39vh;
+background-size: contain;
+margin-bottom: 1vh;
+background-repeat: no-repeat;
+background-position-y: center;
+background-position-x: center;
+    
+}
+.md_ms h2{
+    color: #516a4c;
+    font-size: 27px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+a.clr-noir {
+    color:black;
+} 
+.md_ms .section-title h2::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    height: 1px;
+    width: 100px;
+    background: #eb7458;
+}
+.md_ms .content-ms button{
+bottom: 30px;
+position: absolute;
+left: 30px;
+background-color:#fff;
+border-radius: 30px;
+color:#7c9579;
+font-weight: bold;
+}
+.md_ms .section-title {
+    margin-top: 0 !important;
+}
+.md_ns {height:40vh;background-color:#698e62;background-size: cover;}
+.md_ns h2{
+    color: #fff;
+    font-size: 27px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-top: 11px;
+}
+.md_ns .section-title h2::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    height: 1px;
+    width: 100px;
+    background: #eb7458;
+}
+.md_ns .content-ms button{
+bottom: 30px;
+position: absolute;
+left: 30px;
+background-color:#fff;
+border-radius: 30px;
+color:#7c9579;
+font-weight: bold;
+}
+.md_ms .section-title {
+    margin-top: 0 !important;
+}
+@media (max-width: 1440px){ 
+.md_geo h2 {
+    color: #516a4c;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-top: 11px;
+}
+.md_ms h2 {
+    color: #516a4c;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-top: 11px;
+}
+.md_ms .content-ms button {
+    bottom: 10px;
+    position: absolute;
+    left: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #7c9579;
+    font-weight: bold;
+	font-size: .7rem;
+	margin: .2rem;
+	line-height: 1;
+}
+.md_ns h2 {
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-top: 11px;
+	margin-bottom: 5px !important;
+}
+.cont_ms .content-ms button {
+    bottom: 10px;
+    position: absolute;
+    left: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #7c9579;
+    font-weight: bold;
+	font-size: .7rem;
+	margin: .2rem;
+	line-height: 1;
+}
+}

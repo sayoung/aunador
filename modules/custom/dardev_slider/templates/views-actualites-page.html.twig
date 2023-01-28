@@ -1,0 +1,102 @@
+{% if is_mobile() %}
+
+<div class="page-content-wrapper py-3">
+	<div class="container">
+	  <div class="row g-3 justify-content-center">
+		<!-- Single Blog Card -->
+		{% for key, row in rows   %}
+		<div class="col-12 col-md-8 col-lg-7 col-xl-6">
+		  <div class="card shadow-sm blog-list-card">
+			<div class="d-flex align-items-center">
+			  <div class="card-blog-img position-relative" style="background-image: url('{% if row.image %}{% apply spaceless %}{{ row.image|render|striptags }}{% endapply %}{% endif %}')">
+				<span class="badge bg-warning text-dark position-absolute card-badge">{{row.type_activite|render|striptags}}</span>
+			</div>
+			  <div class="card-blog-content">
+				
+				<a class="blog-title d-block mb-3 text-dark" href="{{ row.url|render|striptags }}">{{row.title|render|striptags}}</a>
+				<a class="btn btn-primary btn-sm" href="{{ row.url|render|striptags }}">Lire la suite</a></div>
+			</div>
+		  </div>
+		</div>
+		{% endfor %}
+	</div>
+	</div>
+</div>
+
+
+{% else %}
+<!--Blog Lists Start-->
+<section class="section">
+	<div class="container">
+		<div class="row">
+			{% for key, row in rows   %}
+
+			{% if loop.index is odd %}  
+			<div class="col-lg-6 col-12 mb-4 pb-2  ">
+				<div class="card blog rounded border-0 shadow overflow-hidden">
+					<div class="row align-items-center g-0">
+						<div class="col-md-6 p-0 m-0  ">
+							<img src="{% if row.image %}{{ row.image|render|striptags }}{% endif %}" class="img-fluid actualites-page" alt="">
+							<div class="overlay bg-dark"></div>
+							<div class="author">
+								<small class="text-light user d-block"><i class="uil uil-user"></i> {{row.type_activite|render|striptags}}</small>
+								<small class="text-light date"><i class="uil uil-calendar-alt"></i> {{row.date|render|striptags}}</small>
+							</div>
+						</div><!--end col-->
+
+						<div class="col-md-6 p-0 m-0  ">
+							<div class="card-body content">
+								<h5><a href="{{ row.url|render|striptags }}" class="card-title title text-dark">{{row.title|render|striptags}}</a></h5>
+								<p class="text-muted mb-0">{{row.content|render|striptags}}</p>
+								<div class="post-meta d-flex justify-content-between mt-3">
+									<ul class="list-unstyled mb-0">
+										<li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>
+										<li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>
+									</ul>
+									<a href="{{ row.url|render|striptags }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+								</div>
+							</div>
+						</div><!--end col-->
+					</div> <!--end row-->
+				</div><!--end blog post-->
+			</div><!--end col-->
+			{% else %}
+			<div class="col-lg-6 col-12 mb-4 pb-2">
+				<div class="card blog rounded border-0 shadow overflow-hidden">
+					<div class="row align-items-center g-0">
+						<div class="col-md-6 p-0 m-0  order-2 order-md-1">
+							<div class="card-body content">
+								<h5><a href="{{ row.url|render|striptags }}" class="card-title title text-dark">{{row.title|render|striptags}}</a></h5>
+								<p class="text-muted mb-0">{{row.content|render|striptags}}</p>
+								<div class="post-meta d-flex justify-content-between mt-3">
+									<ul class="list-unstyled mb-0">
+										<li class="list-inline-item me-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="uil uil-heart me-1"></i>33</a></li>
+										<li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-comment me-1"></i>08</a></li>
+									</ul>
+									<a href="{{ row.url|render|striptags }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+								</div>
+							</div>
+						</div><!--end col-->
+						
+						<div class="col-md-6 p-0 m-0  order-1 order-md-2">
+							<img src="{% if row.image %}{{ row.image|render|striptags }}{% endif %}" class="img-fluid actualites-page" alt="">
+							<div class="overlay bg-dark"></div>
+							<div class="author">
+								<small class="text-light user d-block"><i class="uil uil-user"></i>{{row.type_activite|render|striptags}}</small>
+								<small class="text-light date"><i class="uil uil-calendar-alt"></i> {{row.date|render|striptags}}</small>
+							</div>
+						</div><!--end col-->
+					</div> <!--end row-->
+				</div><!--end blog post-->
+			</div><!--end col-->
+			 {% endif %}
+
+			{% endfor %}
+
+
+		</div><!--end row-->
+	</div><!--end container-->
+</section><!--end section -->
+<!--Blog Lists End-->
+
+{% endif %}

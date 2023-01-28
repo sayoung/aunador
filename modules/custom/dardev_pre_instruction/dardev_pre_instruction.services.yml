@@ -1,0 +1,3 @@
+services:
+  dardev_pre_instruction.mandrill:
+    class: Mandrill

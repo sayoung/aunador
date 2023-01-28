@@ -1,0 +1,5 @@
+name: autar md services Homepage
+type: module
+description: services.
+core_version_requirement: ^9.3 || ^10
+package: Custom

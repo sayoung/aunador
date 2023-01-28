@@ -1,0 +1,7 @@
+dv_contact.admin:
+  path: '/admin/config/contact/parametre/parametrage'
+  defaults:
+    _form: '\Drupal\dv_contact\Form\ContactSubConfigForm'
+    _title: 'custom mail'
+  requirements:
+    _permission: 'administer site configuration'

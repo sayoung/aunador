@@ -1,0 +1,130 @@
+<?php
+
+use Drupal\md_new_prestation\Helper\Helper;
+use Drupal\md_new_prestation\Eprestation\Eprestation;
+use Drupal\commerce_product\Entity\ProductInterface;
+
+use Drupal\commerce_product\Entity\ProductVariation;
+use Drupal\commerce_product\Entity\Product;
+use Drupal\commerce_price\Price;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\KernelTests\KernelTestBase;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\Unicode;
+use Drupal\Core\Mail\MailFormatHelper;
+use Drupal\Core\Site\Settings;
+
+use Drupal\node\NodeInterface;
+/**
+ * Implements hook_ENTITY_TYPE_presave() for node entities.
+ *
+ */
+
+function md_new_prestation_commerce_product_presave(ProductInterface $product) {
+  switch ($product->bundle()) {
+    case 'instruction':
+        $isSMS = $product->get('field_is_sms')->getValue();
+		$phone_numbre = $product->get('field_telephone')->getValue();
+		$isFac = $product->get('field_facture')->getValue();
+		$isPaye = $product->get('field_is_payed')->getValue();
+		$isAnnulation_du_dossier = $product->get('field_annulation_du_dossier')->getValue();
+		$isMail = $product->get('field_mail')->getValue();
+		$isValider = $product->get('field_valider')->getValue();
+		$isNdossier = $product->get('field_ndeg_de_dossier')->getValue();
+		//$isFacture = $product->get('field_la_facture')->getValue();
+		$isMetre = $product->get('field_metrage_du_projet')->getValue();
+		$isNature = $product->get('field_nature_du_projet')->getValue();
+		$isFacture = $product->get('field_la_facture')->target_id;
+		$alreadyvalider = $product->get('field_is_valider')->getValue();
+		
+		$commnetaire = $product->get('field_commnetaire')->getValue();
+		
+
+         $to = '';
+
+         if(!$isSMS[0]['value'] && $product->get('field_telephone')->getValue() && $isMail[0]['value'] ){
+            
+			 $product->set('field_is_sms', 1);
+
+			//$product->set('field_valider', 1);
+
+		//	Helper::sendMailFinalTechnicien($product->get('field_votre_e_mail')->getValue(), $product->get('field_code_de_suivi')->getValue(), 'Nouvelle demande de prestation');
+
+
+        }
+		if($isSMS[0]['value'] && ( $isValider[0]['value'] && !$isAnnulation_du_dossier[0]['value'] )){
+            
+			//$product->set('field_is_sms', 1);
+			$product->set('field_is_valider', 1);
+			$product->set('field_valider', 1);
+			$product->set('field_date_de_validation', date("d-m-Y H:i:s") );
+			
+			
+
+		$m2 = $isMetre[0]['value'];
+		
+			$price_d = $m2 * 3.6 ;
+		
+			 
+
+			//$price_d = $isMetre[0]['value'] * 4 ; 
+			 $variatio_id = $product->get('variations')->getValue();
+			 $variatio_id_arr = array_values($variatio_id);
+			 $id_array_a = array_shift($variatio_id_arr);
+
+			  $f_id = $id_array_a['target_id'];
+
+			$variation = \Drupal\commerce_product\Entity\ProductVariation::load($f_id);
+			$variation->set('price', new \Drupal\commerce_price\Price($price_d, 'MAD'));
+            $variation->save();
+            $product->addVariation($variation);
+
+
+			Helper::sendMailValidation($isMail[0]['value'],$isNdossier[0]['value'],"instruction");
+			Helper::sendMailComptable($isMail[0]['value'],$isNdossier[0]['value'],"instruction");
+
+
+		} elseif ( $isSMS[0]['value'] && ( !$alreadyvalider[0]['value'] && $isAnnulation_du_dossier[0]['value'] ) ){
+			//$product->set('field_annulation_du_dossier', 1);
+			Helper::sendMailAnnulation($isMail[0]['value'],$isNdossier[0]['value'],$commnetaire[0]['value'],"instruction");
+			$product->set('field_data_annulation', date("d-m-Y H:i:s"));
+		
+		} else {
+			
+		}
+		 		 if($isPaye[0]['value'] && !$isFac[0]['value'] && $isFacture ) {
+			 
+			// $product->set('field_prix_en_lettre', $aaa);
+			 
+
+			Helper::sendMailFacture($isMail[0]['value'],$isNdossier[0]['value'],"instruction");
+			$product->set('field_facture', 1);
+			$product->set('field_date_facturation', date("d-m-Y H:i:s"));
+
+		 }
+		
+    break;
+  }
+}
+/**  
+ * Implements hook_mail().
+*/
+
+function md_new_prestation_mail($key, &$message, $params) {
+ $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'node_insert':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('AUNADOR : Rokhas');
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+ 
+
+

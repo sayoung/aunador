@@ -1,0 +1,39 @@
+maps.admin_maps:
+  title: 'aunador'
+  route_name: 'maps.admin_maps'
+  parent: 'system.admin'
+  description: 'Administer and configure your portail.'
+  weight: -9
+
+maps.services:
+  title: 'Services'
+  route_name: 'maps.services'
+  parent: 'maps.admin_maps'
+  description: 'Administer and configure your portail.'
+  weight: -10
+
+
+maps.admin_details:
+  title: 'Territoire d intervention'
+  description: 'Territoire d intervention'
+  parent: maps.admin_maps
+  route_name: maps.admin_details
+
+
+maps.admin_details_driouch:
+  title: 'driouch'
+  description: 'driouch information'
+  parent: maps.admin_details
+  route_name: maps.admin_details_driouch
+  
+maps.admin_details_nador:
+  title: 'nador'
+  description: 'nador information'
+  parent: maps.admin_details
+  route_name: maps.admin_details_nador
+  
+maps.admin_details_guercif:
+  title: 'guercif'
+  description: 'guercif information'
+  parent: maps.admin_details
+  route_name: maps.admin_details_guercif

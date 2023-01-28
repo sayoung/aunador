@@ -1,0 +1,82 @@
+{%
+  set classes = [
+    'node',
+    'node-detail',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{% set conBody  %}
+  {{ content.body }}
+{% endset %}
+
+<!-- Start Display article for teaser page -->
+{% if view_mode == 'teaser' %} 
+  <article{{ attributes.addClass(classes) }}>
+    <div class="event-block">
+      <div class="event-image text-center">
+        {{ content.field_image_agenda }}
+        <div class="date"> 
+          <span class="day">{{ node.field_event_start.value|date('j') }}</span><span class="month">{{ node.field_event_start.value|date('F') }}</span>
+        </div>
+      </div>
+      <div class="event-content">  
+        <div class="event-info">
+          <div class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></div>
+          <div class="event-meta">
+            <span class="event-time"> {{ node.field_date.value }} </span>&nbsp;-&nbsp;<span class="event-address"> {{ node.field_lieu.value }} </span> 
+          </div>
+          <div class="body">{{ conBody|striptags }}</div>
+        </div>
+      </div>  
+    </div>   
+  </article>  
+
+{% elseif view_mode == 'teaser_2' %}
+
+  <div class="event-block-2">
+    <div class="event-image text-center">
+      {{ content.field_image_agenda }} 
+      <div class="event-date">
+        <span class="date">{{ event_date.day }}</span>
+        <span class="month">{{ event_date.month }}</span>
+      </div>
+    </div>
+    <div class="content-inner clearfix">
+      <div class="event-content-inner">
+        <div class="event-content">
+          <h3{{ title_attributes.addClass('post-title') }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>    
+          <div class="event-meta">
+            <span class="event-time"> {{ node.field_date.value }} </span>&nbsp;&nbsp;-&nbsp;&nbsp;<span class="event-address"> {{ node.field_lieu.value }} </span> 
+          </div>
+          <div class="event-line"></div>  
+          <div class="event-description">{{ conBody|striptags }}</div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+{% else %}
+
+<article{{ attributes.addClass(classes.addClass('node-detail')) }}>
+  <div class="post-block event-full">
+ 
+    <div class="post-thumbnail">
+     
+      <div class="event-info clearfix">
+	    <div  class="field field--name-title-text field--type-string ">{{ label }}</div>
+        <div class="date clearfix"><i class="fa fa-calendar"></i>{{ content.field_date }}  </div>
+        <div class="address clearfix"><i class="fa fa-map-marker"></i>{{ content.field_lieu }}</div>
+		<div class="clearfix">{{ conBody|striptags }}</div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+<!-- End Display article for detail page -->
+{% endif %}

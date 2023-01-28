@@ -1,0 +1,17 @@
+md-maps-hp:
+  version: 1.x
+  css:
+    theme:
+      assets/css/styles.css: {}
+  js:
+    assets/js/script.js: {}
+  dependencies:
+    - core/jquery
+
+md-maps-err:
+  version: 1.x
+  css:
+    theme:
+      assets/css/styles_pro.css: {}
+  js:
+    assets/js/script-err.js: {}

@@ -1,0 +1,38 @@
+
+
+
+
+<!-- Banner Section -->
+<section class="banner-section banner-one">
+
+	<div class="banner-carousel{% if lang == "ar" %}-rtl{%else%}{%endif%} owl-theme owl-carousel">
+		{% for key, row in rows   %}
+		{% set imgg = row.image|striptags|raw %}
+		<!-- Slide Item -->
+		<div class="slide-item ">
+			<div class="image-layer" style="background-image: url({% if row.image %}{% apply spaceless %}{{imgg}}{% endapply %}{% endif %});"></div>
+			<div class="auto-container">
+				<div class="content-box">
+					<div class="content clearfix">
+						<div class="inner">
+							<h1>{{row.title|render|striptags|raw}}</h1>
+							<div class="text d-none">{{row.title|render|striptags|raw}}</div>
+							<div class="links-box clearfix">
+								<a href="{{ row.content|render|striptags|raw }}" class="theme-btn btn-style-one"><span class="btn-title">Lire la suite</span></a>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="next-slide">
+				<div class="inner">
+					<div class="count">{{ key + 1}}</div>
+					<div class="text">{{row.title|render|striptags|raw}}</div>
+					<div class="arrow"><span class="flaticon-next"></span></div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+
+	</div>
+</section>

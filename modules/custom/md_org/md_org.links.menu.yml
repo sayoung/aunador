@@ -1,0 +1,5 @@
+md_org.admin_org:
+  title: 'Block org'
+  description: 'Configure block maps'
+  parent: maps.admin_maps
+  route_name: md_org.admin_org

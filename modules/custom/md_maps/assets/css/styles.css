@@ -1,0 +1,129 @@
+.div_carte {
+height: 100vh;
+padding-top: 5vh;
+}
+.maps-contact-size {
+  overflow:hidden;
+  height:100vh;
+  width:100%;
+}
+#Layer_1 path {
+  fill:#7db95a;
+}
+#Layer_1 path:hover {
+  fill:#54bac0;
+}
+.region-map {width: 100%;}
+[dir="rtl"]  #block-mapsblockblock-2 h1.title5 {
+    color: white;
+    padding-right: 73px;
+}
+.txt_span {
+  line-height: 18px !important;
+  padding: 2px 10px !important;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  font-family: dosis;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px
+  #fff solid;
+  position: absolute;
+  z-index: 13;
+  background-color:
+    #94C045;
+  display: none;
+}
+.txt_midelt {
+  top: 150px !important;
+  left: 200px !important;
+  display: block;
+}
+.txt_errachidia {
+  top: 350px !important;
+  left: 320px !important;
+  display: block;
+}
+.detailCarte {
+  display: none;
+  padding-top: 20px;
+  color: #5b534e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.9;
+  position: absolute;
+  left: 10%;
+width: 90%;
+}
+.detailCarte h5 {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 22px;
+  padding-top: 50px;
+}
+.vh-2-d {
+    height: 20vh;
+}
+.vh-2-d .title5 {
+bottom: 0;
+    position: absolute;
+    left: 10%;
+    font-weight: 600;
+    color: #3469c9;
+    BACKGROUND: WHITE;
+    padding: 10px;
+}
+.detail1 {
+  display: block;
+}
+#block-mapsblockblock-2 h1.title5 {
+  color: white;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.div_carte svg {
+  transform: scale(1);
+  height: 90vh;
+}
+.div_carte #panel-1 {text-align:center;}
+#Layer_1 path.cls_active  {
+  fill: #54bac0;
+}
+[dir="rtl"] .detailCarte {
+    left: unset;
+right: 90px;
+text-align: right;
+}
+.spanTooltips {
+
+    z-index: 999999;
+    display: none;
+    position: absolute;
+    border: 1px solid #92c46d;
+background-color:#fff;
+border-radius: 5px;
+padding: 10px;
+color:#000;
+    font-size: 12px Arial;
+    top: 240px;
+    left: 400px;
+
+}
+[dir="rtl"] .detailCarte ol,.detailCarte ul {
+
+    padding: 0 40px 0 0px;
+}
+@media (max-width: 1366px){
+.detailCarte p , .detailCarte ul {margin: 0;}
+#maps_id h1 {font-size: 24px;}
+}
+@media (max-width: 780px){
+.region-map {
+    width: 100%;
+    height: 1250px;
+}
+.div_carte {
+    height: auto;
+}
+.detailCarte p , .detailCarte ul {margin: 0 !important;}
+}

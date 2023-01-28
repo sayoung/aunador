@@ -1,0 +1,76 @@
+{% if is_mobile() %}
+<div class="container" id="event_mobile">
+	<div class="card mb-3">
+	  <div class="card-body">
+		<div class="row gx-2 align-items-end">
+			<div class="col-8">
+			  <div class="image-gallery-text mb-4">
+				<h3 class="mb-0">{{'événement à venir'|t}}</h3>
+			  </div>
+			</div>
+			<div class="col-4 text-end"><a class="btn btn-primary btn-sm mb-4" href="/les-evenements">{{'Voir Plus +'|t}}</a></div>
+		  </div>
+		
+		<div class="event-slide-three-wrapper">
+		  <div class="event-slide3 testimonial-style3">
+			<!-- Single Testimonial Slide -->
+			{% for key, row in rows   %}
+			{% set date_d = row.day|render|striptags %}
+			{% set date_m = row.month|render|striptags %}
+			{% set date_oclock = row.oclock|render|striptags %}
+			<div class="single-testimonial-slide">
+			  <div class="text-content">
+				<span class="d-inline-block badge bg-warning mb-2">
+					<i class="bi bi-calendar-fill"></i> {{ date_d }}-{{ date_m }} : {{date_oclock}} <i class="bi bi-clock-fill"></i></span>
+					
+				<h6 class="mb-2">{{row.title|render|striptags}}</h6>
+				<span class="d-none">Mrrickez, Themeforest</span>
+			  </div>
+			</div>
+			{% endfor %}
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  {% else %}
+<div class="container-fluid  m-0 p-0">
+	<div class="row  m-0 p-0">
+		<div class="col-md-12 mt-4 pt-2 ">
+			<h1 class="text-event text-uppercase encodeblod">{{'événement à venir'|t}} </h1>
+		</div>
+		<div class="col-md-12 mt-4 pt-2  m-0 p-0">
+			
+			<div class="tiny-single-item  m-0 p-0" id="event_1">
+				{% for key, row in rows   %}
+				<div class="col-lg-12 mt-4 pt-2 p-0">
+					<div class="card event-schedule rounded border">
+
+						<div class="card-body">
+							<div class="d-flex">
+								<div class="bg-agenda"  >
+									<ul class="date text-center text-primary me-3 mb-0 list-unstyled "  >
+										{% set date_d = row.day|render|striptags %}
+										{% set date_m = row.month|render|striptags %}
+										{% set date_oclock = row.oclock|render|striptags %}
+										<li class="day fw-bold mb-2">{{ date_d }}</li>
+										<li class="month fw-bold">{{ date_m }}</li>
+									</ul>
+								</div>	
+								<div class="flex-1 content">
+									<h4><a href="{{ row.url|render|striptags }}" class="text-event title">{{row.title|render|striptags}}</a></h4>
+									<p class="text-muted location-time"
+									<span class="text-dark h6">{{row.title|render|striptags}}</span> 
+										<br> <span class="text-dark h6">Time:</span> {{ date_d }}-{{ date_m }} : {{date_oclock}}</p>
+									<a href="{{ row.url|render|striptags }}" class="btn btn-sm btn-outline-event">Lire la suite</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--end col-->
+		{% endfor %}
+			</div>
+		</div><!--end col-->
+	</div><!--end row-->
+</div>
+{%endif%}

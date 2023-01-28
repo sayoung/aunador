@@ -1,0 +1,5 @@
+dardev_pre_instruction.admin_instruction:
+  title: 'Paramètres les Pré-instruction '
+  description: 'Synchroniser les Pré-instruction'
+  parent: maps.services
+  route_name: dardev_pre_instruction.admin_instruction

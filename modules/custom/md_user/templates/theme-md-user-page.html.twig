@@ -1,0 +1,65 @@
+
+<div class="field field--name-title-text field--type-string">{% trans %}Responsables de l’Agence{% endtrans %}</div>
+<div class="chartContainer">
+{% set lang = cur_lang %}
+    {% for node in nodes %}
+    {% set text = node.field_categorie_auer.0.value|render|striptags %}
+     {% if text == "1" %}
+       <div class="bossFigure">
+    <div class="chartModuleBoss">
+      <img class="chartImageBoss" src="{{ file_url(node.field_team_image.entity.fileuri) }}" alt="{{ text }}">
+      <span class="chartName">{% if node.hastranslation(lang) %}
+    {{ node.translation(lang).field_team_name.0.value }}
+    {% else %}
+    {{ 'No translation'|t }}
+    {% endif %}</span>
+      <hr class="chartLine">
+      <span class="chartTitle">{% if node.hastranslation(lang) %}
+    {{ node.translation(lang).field_team_position.0.value }}
+    {% else %}
+    {{ 'No translation'|t }}
+    {% endif %}</span>
+      <span class="chartTitle">{% if node.hastranslation(lang) %}
+    {{ node.translation(lang).field_team_email.0.value }}
+    {% else %}
+    {{ 'No translation'|t }}
+    {% endif %}</span>
+    </div>
+  </div>
+       {% endif  %}
+
+  {% endfor %}
+  <div class="peopleFigures">
+    <div class="chartGrid">
+      
+      
+    {% for node in nodes %}
+    {% set text = node.field_categorie_auer.0.value|render|striptags %}
+     {% if text != "1" %}
+      <div class="chartModule">
+        <span class="chartName">{% if node.hastranslation(lang) %}
+    {{ node.translation(lang).field_team_name.0.value }}
+    {% else %}
+    {{ 'No translation'|t }}
+    {% endif %}</span>
+        <hr class="chartLine">
+        <span class="chartTitle">{% if node.hastranslation(lang) %}
+    {{ node.translation(lang).field_team_position.0.value }}
+    {% else %}
+    {{ 'No translation'|t }}
+    {% endif %}</span>
+        <span class="chartTitle">{% if node.hastranslation(lang) %}
+    {{ node.translation(lang).field_team_email.0.value }}
+    {% else %}
+    {{ 'No translation'|t }}
+    {% endif %}</span>
+        <img class="chartImage" src="{{ file_url(node.field_team_image.entity.fileuri) }}" alt="{{ node.label }}">
+      </div>
+      {% endif  %}
+      {% endfor %}
+     
+
+    </div>
+  </div>
+</div>
+

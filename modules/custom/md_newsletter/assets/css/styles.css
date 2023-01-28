@@ -1,0 +1,119 @@
+.region-newsletter {
+	background-color:#e9e3db;
+	height:20vh;
+	margin-top: 2vh;
+	padding-top: 5vh;
+}
+#md-newsletter .ok-css {
+	visibility: visible;
+	width: 60px !important;
+	padding: 0;
+	background-color:#c8e0e0 !important;
+	max-width: 22%;
+	height: 39px;
+float: left;
+margin: 0;
+margin-top: 5px;
+}
+h4.news-letter {
+    color:#53b9bf;
+	font-size:50px;
+	font-family: Arial;
+font-weight: bolder;
+}
+#md-newsletter #edit-email {
+background-color: #a2cfce;
+width: 50%;
+height: 40px;
+position: relative;
+bottom: 0;
+display: inline-block;
+font-family: "MyriadPro", sans-serif;
+color: #000;
+font-size: 12px;
+font-weight: 501;
+border: 1px solid #fff;
+padding-left: 10px;
+padding-right: 30px;
+border-radius: 0px;
+float: left;
+}
+.sociale-media .button {
+    position: absolute;
+    top: 60px;
+    right: 70px;
+}
+.newsletter-bg i.fa-envelope-open-text {margin-left:20px;}
+[dir="rtl"] .newsletter-bg i.fa-envelope-open-text {margin-left:unset; margin-right:20px;}
+[dir="rtl"] #md-newsletter .ok-css { float: left;}
+
+[dir="rtl"] #md-newsletter #edit-email { float: right;}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+@media (max-width: 1680px) {
+    
+   .sociale-media .button {
+    right: 50px;
+} 
+}
+@media (max-width: 1440px) {
+    
+   .sociale-media .button {
+    right: 20px;
+} 
+#md-newsletter .ok-css {
+    visibility: visible;
+    width: 45px !important;
+    padding: 0;
+    float: left;
+    height: 35px;
+}
+#md-newsletter #edit-email {
+    background-color: #fff;
+    width: 70%;
+    height: 35px;
+    position: relative;
+    bottom: 0;
+    display: inline-block;
+    font-family: "MyriadPro", sans-serif;
+    color:#000;
+    font-size: 12px;
+    font-weight: 501;
+    border: 1px solid #fff;
+    padding-left: 10px;
+    padding-right: 30px;
+    border-radius: 7px;
+    float: left;
+}
+}
+@media (max-width: 1366px) {
+    
+   .sociale-media .button {
+    right: 10px;
+} 
+}
+@media (max-width: 766px){	
+
+  #block-au-mdnewsletterblock-4  .text-align-right {
+    text-align:unset;
+}
+.region-newsletter {
+
+    height: 190px;
+    margin-top: 2vh;
+    padding-top: 5vh;
+}
+#md-newsletter #edit-email {
+    background-color: #9bd5bb;
+    width: calc(100% - 45px);border-radius: 0;}
+}

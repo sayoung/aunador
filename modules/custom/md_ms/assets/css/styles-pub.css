@@ -1,0 +1,72 @@
+#md_pub_aubm .section-title h2{
+    color: #7c9579;
+    font-size: 27px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-top: 30px;
+	margin-bottom: 0;
+}
+#md_pub_aubm .section-title h2::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    height: 1px;
+    width: 100px;
+    background: #eb7458;
+}
+#md_pub_aubm .section-title {
+	margin-top: 0 !important;
+}
+#md_pub_aubm .content-book button{
+bottom: 0;
+position: relative;
+left: 0;
+background-color:#fff;
+border-radius: 30px;
+color:#7c9579;
+font-weight: bold;
+margin-top: 13vh;
+}
+.md_geo {
+    height: 40vh;
+background-image: url(../img/geo.jpg);
+background-size: cover;
+}
+.md_geo .content-ms button {
+    bottom: 30px;
+    position: absolute;
+    left: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #7c9579;
+    font-weight: bold;
+}
+.md_geo h2 {
+    color: #516a4c;
+    font-size: 27px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.md_geo .section-title h2::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    height: 1px;
+    width: 100px;
+    background: #eb7458;
+}
+.section-title h2::after {
+    content: "";
+    height: 7px;
+    width: 7px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 2px solid #8bc3c4;
+    margin-left: 10px;
+}
+.block-md-ms-geo-block {
+    padding-top: 12px;
+}

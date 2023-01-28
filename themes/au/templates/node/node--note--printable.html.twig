@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+    .node_view ul li{
+    display:none;
+    }
+    </style>
+    <link type="text/css" rel="stylesheet" href="{{ base_url }}/modules/contrib/printable/css/note-print.css" />
+      {% if include_css %}
+        <link type="text/css" rel="stylesheet" href="/{{ include_css }}" />
+      {% endif %}
+      {% if close_script %}
+        <script type="text/javascript" src="{{ close_script }}"></script>
+      {% else %}
+        <script type="text/javascript" src="{{ send_script }}"></script>
+      {% endif %}
+  </head>
+  <body>
+  {{ header }}
+{{ title_prefix }}
+
+    {% set title_suffix = '' %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+      <div class="node__meta">
+        {{ author_picture }}
+        <span{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        </span>
+        {{ metadata }}
+      </div>
+    {% endif %}
+  </header>
+  <div{{ content_attributes.addClass('node__content', 'clearfix','noteprint') }}>
+     <h2>{{ label }}</h2>
+	 
+    {{ content }}
+  </div>
+  {{ footer }}
+</body>
+</html>

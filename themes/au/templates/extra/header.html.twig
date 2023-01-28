@@ -1,0 +1,93 @@
+<header id="mob-header" class="d-md-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="top-area">
+                    <div class="icon-bar">
+                        <ul>
+                            <li>
+                                <div class="search-wrapper">
+                                    <div class="input-holder">
+                                        <input type="text" class="search-input" placeholder="Type to search" />
+                                        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                                    </div>
+                                    <span class="close" onclick="searchToggle(this, event);"></span>
+                                </div>
+                            </li>
+                            <li><a href="#"><i class="fas fa-user"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mob-box">
+            <div class="row align-items-center">
+                <div class="col-sm-4 col-6">
+                    <div class="mobile-logo">
+                        <div class="logo-bar">
+                            <a href="#"><img src="/themes/au/assets/images/logo.png" alt="logo"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-6">
+                    {{ page.menu_mb }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<header id="header" class="d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="top-area">
+                    <div class="icon-bar">
+                        <ul>
+                            <li>
+                                {{ page.search }} 
+                            </li>
+                            
+                            {{ page.panier }}
+                            {{ page.menu_user }}
+                            <li><a href="{{ url('<front>') }}/form/contact"><i class="fas fa-envelope"></i></a></li>
+                            <li>{{ page.langue }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="logo-area">
+                    <a href="{{ url('<front>') }}"><img src="/themes/au/assets/images/logo.png" alt="{{ site_slogan }}"></a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <img src="/themes/au/assets/images/img12.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+              <div class="bottom-area">
+                            <!--Nav-->
+    <div class="nav-outer clearfix">
+        <!--Mobile Navigation Toggler-->
+        <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+
+        <!-- Main Menu -->
+        <nav class="main-menu navbar-expand-md navbar-light">
+            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+        {{ page.menu }}
+    </div>
+</nav>
+</div>  </div>
+       
+    </div>
+</div>
+</div>
+    </div>
+</header>

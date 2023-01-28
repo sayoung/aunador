@@ -1,0 +1,5 @@
+d8mail.admin_instruction:
+  title: 'Paramètres les Pré-instruction '
+  description: 'Synchroniser les Pré-instruction'
+  parent: maps.services
+  route_name: d8mail.admin_instruction

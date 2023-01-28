@@ -1,0 +1,93 @@
+{#
+/**
+ * @file
+ * Theme implementation for a 'webform' element.
+ *
+ * This is an copy of the webform.html.twig theme_wrapper which includes the
+ * 'title_prefix' and 'title_suffix' variables needed for
+ * contextual links to appear.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the webform.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_webform()
+ * @see _webform_form_after_build()
+ *
+ * @ingroup themeable
+ */
+#}
+ 
+<section class="contact-page-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-map-marked"></i>
+            </div>
+            <div class="contact-info-text">
+              <h2>{{"address"|t}}</h2>
+              <span> n°5 RUE LARACHE  </span> 
+              <span>NADOR , MAROC</span> 
+            </div>
+          </div>            
+        </div>          
+      </div>          
+      <div class="col-md-4">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info-text">
+              <h2>{{"E-mail"|t}}</h2>
+              <span>aunador2012@gmail.com</span> 
+              <span>contact@aunador.com</span>
+            </div>
+          </div>            
+        </div>                
+      </div>                
+      <div class="col-md-4">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-info-text">
+              <h2>{{"horaires de travail"|t}}</h2>
+              <span>{{"Lundi - Vendredi"|t}}  9:00 am - 16.00 pm</span>
+            </div>
+          </div>            
+        </div>          
+      </div>          
+    </div>
+<div class="row">
+  <div class="col-md-8">
+    <div class="contact-page-form" method="post">
+      <form{{ attributes }}>
+        <div class="row content-form-contact-quote justify-content-center">
+          <div class="col-10 ">
+              <div class="row ">
+                {{ title_prefix }}
+                {{ children }}
+                {{ title_suffix }}
+              </div>
+          </div>
+        </div>
+      </form>
+      
+    </div>          
+  </div>  
+  <div class="col-md-4">        
+  <div class="contact-page-map">
+    <img class="contact-img" src="/sites/default/files/photo%20siege.jpg" alt="Agence Urbaine de Nador-Driouch-Guercif">
+  </div>          
+</div>        
+
+</section>

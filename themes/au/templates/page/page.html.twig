@@ -1,0 +1,22 @@
+<body>
+    <div id="wrapper">
+        {% include directory ~ '/templates/extra/header.html.twig' %}
+        <main id="main" role="main" class="py-5 bg-light">
+            
+                <div class="container">
+                    <div class="row">
+                            <div class="col-md-4 sideba">
+                               
+                          {{ page.sidebar }}
+                            </div>
+                        
+                        <div class="col-md-8">
+			                {{ page.content }}
+                        </di>
+                    </di>
+                </di>
+           
+		</main>
+        {% include directory ~ '/templates/extra/footer.html.twig' %}
+    </div>
+</body>	

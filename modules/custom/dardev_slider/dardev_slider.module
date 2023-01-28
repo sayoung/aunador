@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Custom functions for Views Bootstrap.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\dardev_slider\ViewsSlider;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Language\LanguageInterface;
+/**
+ * Implements hook_theme().
+ */
+function dardev_slider_theme() {
+  return ViewsSlider::getThemeHooks();
+}
+
+
+
+function dardev_slider_views_pre_render(ViewExecutable $view) {
+
+
+  if (isset($view) && ($view->storage->id() == 'event') && ($view->element['#display_id'] == 'eventpage') ){
+    
+    $view->element['#attached']['library'][] = 'dardev_slider/dardev-slider';
+    }
+  
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for views_view_unformatted template.
+ */
+function dardev_slider_preprocess_views_slider(&$variables) {
+  $variables['lang'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $lang_code         = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+
+}

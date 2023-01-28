@@ -1,0 +1,22 @@
+<!-- Blog Area -->
+ {% set lang = cur_lang %}
+<section class="md_ms" id="md_ms" style="background-image:url({{ file_url(get_url_by_fid(ms_image)) }})">
+    
+     {% set lang = cur_lang %}
+    <main class="ms">
+	<div class="section-title " >
+								<h2>{{ ms_title }}</h2>
+							</div>
+	{% for node in nodes %}
+	  <div class="cont_ms">
+    <div class="content-ms">
+	
+
+     
+      <button class="btn"><a  class="clr-noir" href="{{ path('entity.node.canonical', {'node': node.id}) }}">{% trans %}Consulter{% endtrans %}</a></button>
+	 
+    </div>
+  </div>
+{% endfor %}
+   </main>   
+</section>

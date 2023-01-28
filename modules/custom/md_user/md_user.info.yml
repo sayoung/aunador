@@ -1,0 +1,5 @@
+name:  user
+type: module
+description: Les responsables.
+core_version_requirement: ^9.3 || ^10
+package: Custom

@@ -1,0 +1,13 @@
+{
+  "name": "drupal/commerce_profile_pane",
+  "type": "drupal-module",
+  "description": "Commerce Profile Pane",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/commerce_profile_pane",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/commerce_profile_pane",
+    "source": "http://cgit.drupalcode.org/commerce_profile_pane"
+  }
+}

@@ -1,0 +1,7 @@
+dardev_pre_instruction.admin_instruction:
+  path: '/admin/config/instruction/configuration'
+  defaults:
+    _form: '\Drupal\dardev_pre_instruction\Form\InsConfigForm'
+    _title: 'Config les Pré-instruction'
+  requirements:
+    _permission: 'administer site configuration'

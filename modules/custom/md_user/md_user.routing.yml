@@ -1,0 +1,7 @@
+md_actualite:
+    path: '/responsables-aunador'
+    defaults:
+        _controller: 'Drupal\md_user\Controller\UserController::getUser'
+        _title: 'Responsable de l’AUEM'
+    requirements:
+        _access: 'TRUE'

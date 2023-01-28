@@ -1,0 +1,5 @@
+name: Video Homepage
+type: module
+description: Videothèque.
+core_version_requirement: ^9.3 || ^10
+package: Custom

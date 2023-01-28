@@ -1,0 +1,84 @@
+<ul class="nav nav-tabs" role="tablist">
+	<li class="nav-item" id="agend_tab">
+		<a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Agenda</a>
+	</li>
+	<li class="nav-item" id="offres_tab">
+		<a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">offres d’emploi</a>
+	</li>
+</ul><!-- Tab panes -->
+<div class="tab-content">
+	<div class="tab-pane active" id="tabs-1" role="tabpanel">
+		<div class="card-body mb-1 white-text">
+         
+											<ul>
+											   {% set lang = cur_lang %}
+{% for node in nodes %}  
+{% if node.bundle == "md_agenda" %}
+{% if not  node.id %}
+{% set MM = node.field_date.value|date('U')|date("M") %}
+										
+												<li>											
+													<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" role="link">
+													<div class="row">
+														<div class="col-1 col-m-1 col-s-1">
+															<span>
+																										
+																<strong>{{ node.field_date.value|date('U')|date("d") }}</strong> 
+																{{ MM|trans }}															</span>
+														</div>
+														<div class="col-10 col-m-10 col-s-10">
+														
+													  		{% if node.hastranslation(lang) %}
+    <p>{{ node.translation(lang).label }}</p>
+    {% else %}
+    <p>No translation<p/>
+    {% endif %}
+													  	</div>
+													</div>
+													</a>
+												</li>
+												{% endif %}
+												{% endif %}{% endfor %}
+											</ul>
+											<a href="{{ url('<front>') }}/evenement" class="view-more" role="link">{% trans %} Plus d'évènement {% endtrans %}</a>
+
+          </div>
+	</div>
+	<div class="tab-pane" id="tabs-2" role="tabpanel">
+		           <div class="card-body mb-1 white-text">
+         
+											<ul>
+											   {% set lang = cur_lang %}
+{% for node in nodes %}
+{% if node.bundle == "appel_a_candidatures" %}  
+{% if not  node.id %}
+{% set MM = node.field_date.value|date('U')|date("M") %}
+										
+												<li>											
+													<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" role="link">
+													<div class="row">
+														<div class="col-1 col-m-1 col-s-1">
+															<span>
+																										
+																<strong>{{ node.field_date.value|date('U')|date("d") }}</strong> 
+																{{ MM|trans }}															</span>
+														</div>
+														<div class="col-10 col-m-10 col-s-10">
+														
+													  		{% if node.hastranslation(lang) %}
+    <p>{{ node.translation(lang).label }}</p>
+    {% else %}
+    <p>No translation<p/>
+    {% endif %}
+													  	</div>
+													</div>
+													</a>
+												</li>
+												{% endif %}{% endif %}
+												{% endfor %}
+											</ul>
+											<a href="{{ url('<front>') }}/avis-annonces" class="view-more" role="link">{% trans %} Plus d'Appels à condidature {% endtrans %}</a> 
+
+          </div>
+	</div>
+</div>

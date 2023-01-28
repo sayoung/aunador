@@ -1,0 +1,16 @@
+md_new_prestation.admin:
+  path: '/admin/config/instruction/parametre/custom_mail'
+  defaults:
+    _form: '\Drupal\md_new_prestation\Form\InstructionConfigIorm'
+    _title: 'custom mail'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+md_new_prestation.pdf_print:
+  path: '/product/{cid}/pdf-download' 
+  defaults: 
+    _controller: '\Drupal\md_new_prestation\Controller\PdfController::GetPdf' 
+    _title: 'Hello World'
+  requirements: 
+    _permission: 'access content' 

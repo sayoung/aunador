@@ -1,0 +1,21 @@
+global-styling:
+  version: VERSION
+  css:
+    layout:
+      assets/css/bootstrap.min.css: {}
+      assets/css/owl.css: {}
+      assets/scss/main.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css: {}
+      assets/css/eprestation.css: {}
+      assets/css/custom.css: {}
+      assets/css/responsive.css: {}
+  js:
+    assets/js/bootstrap.bundle.min.js: 
+    assets/js/owl.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js: { type: external, minified: true }
+    assets/js/app.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

@@ -1,0 +1,23 @@
+ms.admin_ms:
+  path: '/admin/config/ms/motpres'
+  defaults:
+    _form: '\Drupal\md_ms\Form\BlocConfigForm'
+    _title: 'Config la cart'
+  requirements:
+    _permission: 'administer site configuration'
+    
+ns.admin_ms:
+  path: '/admin/config/ms/mission'
+  defaults:
+    _form: '\Drupal\md_ms\Form\BlockMTConfigForm'
+    _title: 'Config la cart'
+  requirements:
+    _permission: 'administer site configuration'
+    
+geo.admin_ms:
+  path: '/admin/config/ms/geo'
+  defaults:
+    _form: '\Drupal\md_ms\Form\BlockPubConfigForm'
+    _title: 'Config la cart'
+  requirements:
+    _permission: 'administer site configuration'

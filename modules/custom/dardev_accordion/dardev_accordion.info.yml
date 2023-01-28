@@ -1,0 +1,7 @@
+name: dardev_accordion
+type: module
+description: 'Accordion module developer par DARDEV pour INRA.'
+package: INRA
+core_version_requirement: ^8.8.0 || ^9 || ^10
+dependencies:
+  - drupal:views

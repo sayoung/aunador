@@ -1,0 +1,235 @@
+.hide-varia .layout-region-product-footer__content .field--widget-boolean-checkbox,
+.hide-varia .layout-region-product-secondary,
+.hide-varia #edit-title-0-value--description,
+.hide-varia .js-form-item-title-0-value,
+#note-edit .js-form-item-title-0-value {
+    display: none;
+}
+
+.hide-varia .layout-region-product-footer__content .field--widget-boolean-checkbox,
+.hide-varia .layout-region-product-secondary,
+.hide-varia #edit-title-0-value--description,
+.hide-varia .js-form-item-title-0-value,
+#note-edit .js-form-item-title-0-value {
+    display: none;
+}
+
+.field--name-field-num-doss .field__label,
+.field--name-field-nom-prenom- .field__label,
+.field--name-field-commission .field__label,
+.field--name-field-code-com .field__label,
+.field--name-field-date-com .field__label,
+.field--name-field-heurecom .field__label,
+.field--name-field-date-arr .field__label,
+.field--name-field-petitionnaire .field__label,
+.field--name-field-architecte .field__label,
+.field--name-field-num-com .field__label,
+.field--name-field-consistance .field__label,
+.field--name-field-pr-res .field__label,
+.field--name-field-avis-aust .field__label,
+.field--name-field-avis-pref .field__label,
+.field--type-commerce-price .field__label,
+.field--name-field-num .field__label,
+.field--name-field-votre-e-mail .field__label,
+.field--name-field-metrage .field__label,
+.field--name-field-votre-e-mail .field__label {
+    width: 30% !important;
+    float: left !important;
+    text-transform: capitalize;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.field--name-field-num-doss,
+.field--name-field-nom-prenom-,
+.field--name-field-commission,
+.field--name-field-code-com,
+.field--name-field-num-com,
+.field--name-field-date-com,
+.field--name-field-heurecom,
+.field--name-field-date-arr,
+.field--name-field-petitionnaire,
+.field--name-field-architecte,
+.field--name-field-consistance,
+.field--name-field-pr-res,
+.field--name-field-avis-pdf,
+.field--name-field-pdf-name,
+.field--name-field-avis-aust,
+.field--name-field-avis-pref,
+.field--type-commerce-price,
+.field--name-field-num,
+.field--name-field-votre-e-mail,
+.field--name-field-metrage,
+.field--name-field-votre-e-mail {
+    float: unset;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.field--name-field-votre-e-mail input[type="email"] {
+    width: 31%;
+}
+
+#regle-dossier .form-item-quantity-0-value {
+    display: none;
+}
+
+.field--type-commerce-price {}
+
+.hide-varia .layout-region-product-footer__content .field--widget-boolean-checkbox,
+.hide-varia .layout-region-product-secondary,
+.hide-varia #edit-title-0-value--description,
+.hide-varia .js-form-item-title-0-value,
+#note-edit .js-form-item-title-0-value {
+    display: none;
+}
+
+.hide-varia #edit-actions {
+    float: right;
+}
+
+.hide-varia .layout-region-product-main {
+    width: 100%;
+}
+
+#views-exposed-form-suivi-e-prestation-page-1,
+#views-exposed-form-suivi-de-la-note-page-1,
+#views-exposed-form-e-prestation-demn-page-2 {
+    padding: 40px;
+    width: 800px;
+}
+
+form[id^="views-exposed-form"] {
+    padding: 40px;
+    padding-bottom: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+#edit-field-num-wrapper {
+    clear: both;
+}
+
+#other-presta .field--widget-commerce-product-single-variation {
+    display: none;
+}
+
+#edit-field-date-com-wrapper h4.label {
+    width: 30% !important;
+    float: left !important;
+    line-height: 1.5;
+}
+
+#edit-field-commission-0 summary,
+#edit-variations summary {
+    display: flow-root list-item;
+}
+
+.view-programmes-des-commissions .views-field-nothing {
+    text-align: center;
+}
+
+.view-programmes-des-commissions .views-field-nothing a {
+    color: #726689;
+}
+
+.view-programmes-des-commissions .fa-cart-arrow-down {
+    font-size: 24px;
+}
+
+.views-field-field-remuneration {
+    text-align: center;
+}
+
+.field--name-field-avis-de-la-l-auem .field__label,
+.field--name-field-adresse .field__label,
+.field--name-field-remuneration .field__label {
+    width: 30% !important;
+    float: left !important;
+    text-transform: capitalize;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.field--name-field-avis-de-la-l-auem,
+.field--name-field-adresse,
+.field--name-field-remuneration {
+    height: 35px;
+}
+
+h2.view-head {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #038a03;
+    margin-bottom: 20px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#other-presta .field--type-boolean {
+    display: grid;
+    width: 100%;
+}
+
+#other-presta .field--widget-boolean-checkbox input.form-checkbox {
+    position: absolute;
+}
+
+input#edit-j-ai-lu-et-j-accepte-a-target-blank-href-les-termes-et-conditio {
+    max-width: 30px;
+    float: left;
+    min-width: 30px;
+    opacity: 1;
+    height: 26px;
+}
+
+.js-form-item-field-valider-value label.option {
+    padding-left: 40px;
+}
+
+#other-presta .js-form-type-checkbox label.option {
+    display: block;
+    font-weight: normal;
+    padding-left: 30px;
+}
+
+#rokhas-dossier-1 .field--widget-entity-reference-autocomplete,
+#rokhas-dossier-1 .js-form-item-quantity-0-value {
+    display: none;
+}
+
+#technicien-e-prestation .field--type-boolean {
+    display: flex;
+}
+
+#technicien-e-prestation #edit-field-annulation-du-dossier-value {
+    float: left;
+}
+
+#technicien-e-prestation .form-type-checkbox {
+    display: flex;
+}
+
+.js-form-item-field-annulation-du-dossier-value label.option {
+    padding-left: 40px;
+}
+
+#rokhas-dossier .field--name-quantity {
+    display: none;
+}
+
+#rokhas-dossier .field__label {
+    float: left;
+    padding-right: 15px;
+    width: 30%;
+    text-transform: capitalize;
+}
+
+#rokhas-dossier .field--name-field-projet .field__label {
+    display: contents;
+}

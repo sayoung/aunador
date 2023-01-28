@@ -1,0 +1,11 @@
+enote.admin:
+  title: 'Paramètres E-note '
+  description: 'Personnaliser les e-mails'
+  parent: maps.services
+  route_name: notemail.admin_smsemail
+
+worknote.admin:
+  title: 'Paramètres E-note Workflow EMail '
+  description: 'Personaliser les e-mails'
+  parent: maps.services
+  route_name: notemail.admin_workflow_email

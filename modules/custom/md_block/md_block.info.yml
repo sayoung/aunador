@@ -1,0 +1,5 @@
+name:  md block Homepage
+type: module
+description: le block.
+core_version_requirement: ^9.3 || ^10
+package: AU

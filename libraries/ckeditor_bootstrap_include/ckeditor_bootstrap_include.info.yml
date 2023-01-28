@@ -1,0 +1,13 @@
+name: CKEditor Bootstrap Include
+type: module
+description: CKEditor Bootstrap Include by JS+. https://js.plus/products/include-css-js
+package: CKEditor
+# core: 8.x
+dependencies:
+  - ckeditor
+  
+
+version: '8.x-1.7'
+core: '8.x'
+project: 'ckeditor_bootstrap_include'
+datestamp: 1544259128063

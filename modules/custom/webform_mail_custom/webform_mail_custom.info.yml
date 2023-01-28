@@ -1,0 +1,5 @@
+name: webform_mail_custom
+type: module
+description: send an email programmatically after note paiement.
+core_version_requirement: ^9.3 || ^10
+package: Custom

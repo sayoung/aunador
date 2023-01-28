@@ -1,0 +1,33 @@
+notemail.parent_enote:
+  path: '/admin/agence/services/e-note'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'aunador'
+  requirements:
+    _permission: 'TRUE'
+
+notemail.admin_smsemail:
+  path: '/admin/config/notemail/smsemail'
+  defaults:
+    _form: '\Drupal\notemail\Form\NotemailConfigForm'
+    _title: 'Config SMS E-mail'
+  requirements:
+    _permission: 'administer site configuration'
+
+notemail.admin_workflow_email:
+  path: '/admin/config/notemail/workflow_mail'
+  defaults:
+    _form: '\Drupal\notemail\Form\WorkflowConfigForm'
+    _title: 'Config Workflow E-mail'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+
+notemail.pdf_print:
+  path: '/node/{cid}/pdf-download' 
+  defaults: 
+    _controller: '\Drupal\notemail\Controller\PdfController::GetPdf' 
+    _title: 'Hello World'
+  requirements: 
+    _permission: 'access content'

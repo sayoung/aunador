@@ -1,0 +1,5 @@
+name: les ecos de presse
+type: module
+description: echo presse.
+core_version_requirement: ^9.3 || ^10
+package: AU

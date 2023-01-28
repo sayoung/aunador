@@ -1,0 +1,7 @@
+name: md_new_prestation
+type: module
+description: Module for insert  E-prestation in Website.
+
+core_version_requirement: ^9.3 || ^10
+package: Custom
+

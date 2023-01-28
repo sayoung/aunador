@@ -1,0 +1,5 @@
+name: maps
+type: module
+description: la carte.
+core_version_requirement: ^9.3 || ^10
+package: AU

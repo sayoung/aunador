@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\aust_eprestation\Helper\Helper;
+use Drupal\aust_eprestation\Eprestation\Eprestation;
+use Drupal\commerce_product\Entity\ProductInterface;
+
+use Drupal\commerce_product\Entity\ProductVariation;
+use Drupal\commerce_product\Entity\Product;
+use Drupal\commerce_price\Price;
+/**
+ * Implements hook_ENTITY_TYPE_presave() for node entities.
+ *
+ */
+
+function aust_eprestation_commerce_product_presave(ProductInterface $product) {
+
+}
+
+/**
+ * Implements hook_cron().
+ */
+function aust_eprestation_cron(){
+    //Helper::deleteAll();
+}
+

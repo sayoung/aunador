@@ -1,0 +1,5 @@
+name: md Newsletter
+type: module
+description: Collect emails and send newsletter to newsletter.
+core_version_requirement: ^9.3 || ^10
+package: Custom

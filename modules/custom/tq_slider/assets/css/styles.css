@@ -1,0 +1,4 @@
+#carousel-example-2 .carousel-inner .carousel-item > div > img {
+	height: 519px;
+	object-fit: cover;
+}

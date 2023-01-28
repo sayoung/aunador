@@ -1,0 +1,5 @@
+dv_contact.admin:
+  title: 'Paramètres Télé rendez-vous '
+  description: 'Synchroniser les Télé rendez-vous'
+  parent: maps.services
+  route_name: dv_contact.admin

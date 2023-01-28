@@ -1,0 +1,13 @@
+name: Library Manager
+type: module
+description: Provides administrative interface to manage libraries.
+core_version_requirement: ^8 || ^9 || ^10
+configure: library_manager.settings
+dependencies:
+  - drupal:system
+  - codemirror_editor:codemirror_editor
+
+# Information added by Drupal.org packaging script on 2022-06-17
+version: '2.0.1'
+project: 'library_manager'
+datestamp: 1655491215

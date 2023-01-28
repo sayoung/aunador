@@ -1,0 +1,85 @@
+{% if is_mobile() %}
+
+<div class="page-content-wrapper ">
+	<div class="container">
+		
+	  <div class="row g-3 justify-content-center">
+		<!-- Single Blog Card -->
+		{% for key, row in rows   %}
+		{% set date_d = row.day|render|striptags %}
+		{% set date_m = row.month|render|striptags %}
+		{% set date_oclock = row.oclock|render|striptags %}
+			<!-- Single Blog Card -->
+			<div class="col-12 col-md-8 col-lg-7 col-xl-6">
+			  <div class="card shadow-sm blog-list-card">
+				<div class="d-flex align-items-center">
+				  <div class="card-blog-img position-relative pt-5" style="background-image: url('/themes/custom/jeb/img/agenda_default.jpg')">
+					<span class="d-block text-center text-uppercase text-white fs-1">{{ date_m }}</span>
+					<span class="d-block text-center text-uppercase text-white fs-1">{{ date_d }}</span>
+				</div>
+					
+				  <div class="card-blog-content">
+					<span class="badge bg-info rounded-pill mb-2 d-inline-block">{{ date_d }} {{ date_m }}</span>
+					<a class="blog-title d-block mb-3 text-dark" href="{{ row.url|render|striptags }}">{{row.title|render|striptags}}</a>
+					<a class="btn btn-primary btn-sm" href="{{ row.url|render|striptags }}">Lire la suite</a></div>
+				</div>
+			  </div>
+			</div>
+			{% endfor %}
+	</div>
+	</div>
+</div>
+{% else %}
+<div class="row agenda ">
+	<div  class="col-12 ">
+		  
+		  </div>
+		  <div  class="col-12 ">
+		 
+		 <div class="arlo arlo-loaded" style="position: relative;">
+		<ul class="arlo-event-list" style="position: relative;" min-width="551px 769px 1000px 1250px">
+			{% for key, row in rows   %}
+			{% set date_d = row.day|render|striptags %}
+										{% set date_m = row.month|render|striptags %}
+										{% set date_oclock = row.oclock|render|striptags %}
+			<li class="arlo-event-listitem" id="view101">
+		<div class="arlo-listitem arlo-clearfix">
+			<div class="arlo-date arlo-font-special">
+				<div class="arlo-date-container arlo-text-color-dark">
+					<div class="arlo-start-month arlo-bg-color-primary">
+						{{ date_m }}
+					</div>
+					<div class="arlo-start-date arlo-text-color-lightest">
+						{{ date_d }}
+					</div>
+				</div>
+			</div>
+			<div class="arlo-title arlo-font-special">
+				<div class="arlo-name arlo-text-color-dark arlo-h2">
+					<a href="{{ row.url|render|striptags }}">	
+						{{row.title|render|striptags}}</a>
+				</div>
+			</div>
+			<div class="arlo-detail arlo-font-primary">
+				<div class="arlo-summary arlo-text-color-light">
+				   
+		{{  row.content|render|striptags }}
+				</div>
+	
+				<div class="arlo-offers">
+					<div class="arlo-offer-container "><span class="arlo-offer-amount">
+		</span>  </div>
+				</div>
+				<span class="arlo-more-info-button">
+					<a href="{{ row.url|render|striptags }}" class="arlo-bg-color-primary">{{ 'Plus'|t }}</a>
+				</span>
+			</div>		
+		</div>
+	</li>
+		{% endfor %}
+		</ul></div>
+	</div>
+	</div>
+	
+
+	{% endif %}

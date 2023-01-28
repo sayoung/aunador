@@ -1,0 +1,19 @@
+md-ms-hp:
+  version: 1.x
+  css:
+    theme:
+      assets/css/styles.css: {}
+  js:
+    assets/js/script.js: {}
+  dependencies:
+    - core/jquery
+    
+md-pub-hp:
+  version: 1.x
+  css:
+    theme:
+      assets/css/styles-pub.css: {}
+  js:
+    assets/js/script.js: {}
+  dependencies:
+    - core/jquery

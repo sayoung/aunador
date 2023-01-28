@@ -1,0 +1,5 @@
+
+
+global-js:
+ js:
+   js/confirmation_popup.js : {}

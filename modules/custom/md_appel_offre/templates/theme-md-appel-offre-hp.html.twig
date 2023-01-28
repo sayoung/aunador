@@ -1,0 +1,30 @@
+<!-- Blog Area -->
+ {% set lang = cur_lang %}
+<section class="md_appel_offre" id="md_appel_offre">
+    
+     {% set lang = cur_lang %}
+    <main class="appel_offre">
+	<div class="section-title row">
+								
+								<div class="col-md-6 col-10"><h2>{% trans %}APPELS D'OFFRES{% endtrans %}</h2></div>
+								<div class="col-md-6 col-2 text-right"><a href="{{ base_path }}avis-annonces/appel_a_doffres"><span class="more"  >+</span></a></div>
+							</div>
+	
+	  <div class="cont_appel_offre multiple-items-offrs" style="background-image:url({{ file_url(node.field_image_slider.entity.fileuri) }})">
+    {% for node in nodes %}
+	<div class="content-appel-offre">
+	{% if node.hastranslation(lang) %}
+                   {% set text = node.translation(lang).title.0.value|render|striptags %}
+				    
+      <h3 class="title">{{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}</h3>
+     
+      <button class="btn text-black"><a href="{{ path('entity.node.canonical', {'node': node.id}) }}">{% trans %} en savoir plus {% endtrans %}</a></button>
+	   {% else %}
+     <h2>No translation</h2>
+    {% endif %}
+    </div>
+	{% endfor %}
+  </div>
+
+   </main>   
+</section>

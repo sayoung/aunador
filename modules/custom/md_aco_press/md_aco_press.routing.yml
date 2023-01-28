@@ -1,0 +1,7 @@
+md_aco_press.content:
+  path: '/revue-press' 
+  defaults: 
+    _controller: 'Drupal\md_aco_press\Controller\EchoController::getEco' 
+    _title: 'Revue de presse'
+  requirements: 
+    _permission: 'access content' 

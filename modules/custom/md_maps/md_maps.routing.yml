@@ -1,0 +1,50 @@
+maps.admin_maps:
+  path: '/admin/agence'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'aunador'
+  requirements:
+    _permission: 'TRUE'
+
+
+
+
+maps.services:
+  path: '/admin/agence/services'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'aunador'
+  requirements:
+    _permission: 'TRUE'
+
+
+maps.admin_details:
+  path: '/admin/config/md_maps/details'
+  defaults:
+    _form: '\Drupal\md_maps\Form\BlocConfigForm'
+    _title: 'Config la cart'
+  requirements:
+    _permission: 'administer site configuration'
+maps.admin_details_driouch:
+  path: '/admin/config/md_maps/details/driouch'
+  defaults:
+    _form: '\Drupal\md_maps\Form\DriouchConfigForm'
+    _title: 'driouch'
+  requirements:
+    _permission: 'administer site configuration'
+
+maps.admin_details_nador:
+  path: '/admin/config/md_maps/details/nador'
+  defaults:
+    _form: '\Drupal\md_maps\Form\NadorConfigForm'
+    _title: 'nador'
+  requirements:
+    _permission: 'administer site configuration'
+    
+maps.admin_details_guercif:
+  path: '/admin/config/md_maps/details/guercif'
+  defaults:
+    _form: '\Drupal\md_maps\Form\GuercifConfigForm'
+    _title: 'guercif'
+  requirements:
+    _permission: 'administer site configuration'

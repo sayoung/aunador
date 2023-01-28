@@ -1,0 +1,5 @@
+name: Mot du directeur en Acceuil
+type: module
+description: Type de contenu mot du directeur.
+core: 8.x
+package: Custom

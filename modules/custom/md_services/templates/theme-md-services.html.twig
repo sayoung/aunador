@@ -1,0 +1,27 @@
+<div class="site-outer">
+	<div class="site-inner">
+		<section class="container-fluid">
+		    <h2>{% trans %}SERVICES AUX CITOYENS{% endtrans %}</h2>
+			<!-- ACCORDION ROW -->
+			<div class="row">
+					<ul class="accordion-group" id="accordion">
+					    {% for node in sliders %}
+ {% set fid = node.bg_service  %}
+						<li style="background-image:url({{ file_url(get_url_by_fid(fid)) }})">
+							<div class="accordion-overlay"></div>
+							<h3 class="rotate">{{ node.service_title|t }}</h3>
+							<section class="hidden-xs">
+								<article>
+									{% if node.service_link_title_1 %}<p><a href="{{ node.service_link_1|t  }}">{{ node.service_link_title_1|t  }}</a></p>{%  endif %}
+									{% if node.service_link_title_2 %}<p><a href="{{ node.service_link_2|t  }}">{{ node.service_link_title_2|t  }}</a></p>{%  endif %}
+									{% if node.service_link_title_3 %}<p><a href="{{ node.service_link_3|t  }}">{{ node.service_link_title_3|t  }}</a></p>{%  endif %}
+								</article>
+							</section>
+						</li>
+{% endfor %}
+					</ul>
+			</div>
+		</section>
+	</div>
+
+</div>

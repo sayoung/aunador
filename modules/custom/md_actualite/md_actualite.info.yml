@@ -1,0 +1,5 @@
+name: actualites Homepage
+type: module
+description: actualites.
+core_version_requirement: ^9.3 || ^10
+package: AU

@@ -1,0 +1,122 @@
+<body>
+<div class="wrapper bg-interne" id="wrapper">
+
+
+		<!-- Header Area -->
+		<!-- Header Area -->
+		<header id="header" class="justify-content-center header header-transparent sticky-header cr-border-bottom"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<div class="full-container d-none d-lg-block">
+			<div class="full-container first-section">
+<div class="row">
+    				<div class="col-3 header-inner justify-content-center">
+    				    
+					<a href="{{ url('<front>') }}" class="logo">
+						<img src="{{ base_path ~ directory }}/images/logo-{{ cur_language }}.png" alt="{{ site_slogan }}" class="logo-au">
+					</a>
+					</div>
+<div class="col-8">
+    <div class="row">
+<div class="col-12">
+
+  <div class=" fs_icon">
+       
+       {{ page.langue }}
+      
+    <a href="{{ url('<front>') }}/form/contact"><span class="icon"><i class="fas fa-envelope"> </i></span></a>
+   <!--  <a href="https://www.youtube.com/channel/UCtBa2Ua6iSM8Y_2X7rTZqCQ"><span class="icon"><i class="fab fa-youtube"></i></span></a>
+    <a href="https://www.facebook.com/AUMeknes/"><span class="icon"><i class="fab fa-facebook-f"> </i></span></a> -->
+    
+    <div class="panier_au" >{{ page.panier }}</div>
+   <div  class="search_au">{{ page.search }}</div>
+  
+  </div>
+</div>
+<div class="col-12">
+    {{ page.menu }}
+</div>
+</div>
+ 
+</div>
+
+</div>
+				
+			</div>
+			</div>
+			<div class="mobile-menu-wrap d-block d-lg-none">
+				<div class="row">
+				    <div class="col-12">
+
+  <div class=" fs_icon">
+       
+       {{ page.langue }}
+    <a href="{{ url('<front>') }}/form/contact"><span class="icon"><i class="fas fa-envelope"> </i></span></a>
+   <!--  <a href="https://www.youtube.com/channel/UCLX-_UHwiXqBoJT7cMd0qsQ"><span class="icon"><i class="fab fa-youtube"></i></span></a>
+    <a href="https://web.facebook.com/AU.Errachidia.Midelt?_rdc=1&_rdr"><span class="icon"><i class="fab fa-facebook-f"> </i></span></a>-->
+    <div class="panier_au" >{{ page.panier }}</div>
+   <div  class="search_au">{{ page.search }}</div>
+  
+  </div>
+</div>
+
+				 <div class="col-12">
+				<div class="container p-0 m-0">
+					<div class="mobile-menu p-0 m-0 row">
+						<div class="col-4 order-1"><a href="{{ url('<front>') }}" class="mobile-logo">
+							<img src="{{ base_path ~ directory }}/images/logo-fr.png" alt="logo">
+						</a>
+					</div></div>
+				</div>
+			</div>
+			</div>
+			</div>
+		</header>
+		<!--// Header Area -->
+
+		<!-- Banner Area -->
+
+{% set has_breadcrumb = '' %}
+
+	<div class="full-container">
+        <img class="d-block w-100 tt_ff_img" src="{{ base_path ~ directory }}/images/interne.jpg" alt="darrafia">
+        {% if page.breadcrumbs %}
+	   	{% set has_breadcrumb = ' has-breadcrumb' %}
+			<div class="tt_ff">
+				{{ page.breadcrumbs }}
+			</div>
+		{% endif %}
+      </div>
+
+
+
+		<!--// Banner Area -->
+
+		</div>
+		<div class="full-container bg "  id="interne">
+		<div class="row justify-content-center margin-rl">
+    <div class="col-12 col-xl-12 " id="interne_content">
+	<div class="w-100">
+      {{ page.content }}
+    </div></div>
+  </div>
+   </div>
+<div class="space-h"></div>
+	<footer class="footer container-full  slide-wrap ">
+
+		<div class="footer-relative d-none d-lg-block">
+            <div class="menu-footer">
+                <div class="menu-bas">
+
+ {{ page.menu_footer }}
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="copyright">
+		{{ 'Copyright'|t }}: © {{ site_slogan|t }} {{ "now"|date("Y") }}. {{ 'Tous droits réservés'|t }}.
+        </div>
+
+	</footer>
+</body>

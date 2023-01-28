@@ -1,0 +1,69 @@
+{% if is_mobile() %}
+
+  <div class="container" id="visite_mobile">               
+    <div class="testimonial-slide-one-wrapper">
+      <div class="testimonial-slide-visite testimonial-style1">
+        <!-- Single Testimonial Slide -->
+		{% for key, row in rows   %}
+		{% set imgg = row.image|striptags|raw %}
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <div class="single-testimonial-slide">
+                <div class="image-wrapper shadow"><img src="{% if row.image %}{% apply spaceless %}{{imgg}}{% endapply %}{% endif %}" alt=""></div>
+                <div class="text-content">
+                  <p class="mb-2">{{row.title|render|striptags}}</p>
+				  {% set url = row.url|render|striptags %}
+				  <span class="d-block"><a target="_blank" hreaf="{{ row.url|render|striptags }}">Lire la suite</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		{% endfor %}
+
+      </div>
+    </div>
+  </div>
+{% else %}
+
+<div class="container-fluid">
+	<div class="row">
+		
+		<div class="col-md-12 mt-4 pt-2">
+			
+			<div class="tiny-three-item" id="visite_4">
+				{% for key, row in rows   %}
+				<div class="col-md-4 ">
+					<div data-aos="fade-up" class="card shadow aos-init aos-animate" data-aos-duration="500">
+					  <div class="card-img-top-overlay">
+						<div class="overlay"></div>
+						<div class="position-relative">
+							<img alt="" class="card-img-top img-same-height" src="{% if row.image %}{{ row.image|render|striptags }}{% endif %}">
+						  <div class="shape text-white bottom"><svg width="528px" height="40px" viewBox="0 0 528 40" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+							  <g id="shape" transform="matrix(-1.138336E-07 -1 1 -1.138336E-07 0 39.92764)">
+								<path d="M0 0L40.5467 0C40.5467 0 -31.8215 230.87 38.7134 528.217C39.8794 533.133 31.7549 527.502 31.0925 528.75C28.7914 533.084 26.1543 528.191 24.4327 529.178C59.2372 539.206 14.0091 521.981 12.9329 530.001L1.02722 528.284L0 0Z" transform="translate(7.629395E-06 6.103516E-05)" fill="currentColor" stroke="none"></path>
+							  </g>
+							</svg></div>
+						</div>
+					  </div>
+					  <div class="card-body">
+						<div class="mt-2">
+						  <h4><a class="card-title-link" href="{{ row.url|render|striptags }}">{{row.title|render|striptags}}</a></h4>
+						  <p class="text-muted mb-2"> {{ row.content|render|striptags }} <br/><a href="{{ row.url|render|striptags }}">Lire la suite</a></p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+
+
+
+
+				
+
+				{% endfor %}
+			</div>
+		</div><!--end col-->
+	</div><!--end row-->
+</div>
+{% endif %}

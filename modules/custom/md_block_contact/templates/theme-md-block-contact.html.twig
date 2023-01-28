@@ -1,0 +1,190 @@
+			<!-- Blog Area -->
+						<div class="row ">
+			<div class="col-md-12  st_con vh-7">
+			<section class="row maps_contact m-0">
+         <div class="row m-0" style="width:100%;position:hight:50%;">
+        <div class="maps_google col-12 " id="meknes" >
+             
+    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13044.68684038357!2d-2.9276759!3d35.1772726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x96956b004af7bf8c!2sAgence%20Urbaine%20de%20Nador!5e0!3m2!1sfr!2sma!4v1597327385928!5m2!1sfr!2sma" allowfullscreen></iframe></div>
+    </div>
+        
+		<div class="maps_google col-12 " id="hajeb" style="display:none;"  >
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.5647128876976!2d-5.3766476843711954!3d33.66843898071217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQwJzA2LjQiTiA1wrAyMicyOC4xIlc!5e0!3m2!1sfr!2sma!4v1590447258556!5m2!1sfr!2sma"  frameborder="0" class="maps-contact-size" allowfullscreen=""></iframe>
+        </div>
+		<div class="maps_google col-12 " id="ifrane" style="display:none;" onclick="ifrane()">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.9095592108365!2d-5.109936684374112!3d33.52973698075139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMxJzQ3LjEiTiA1wrAwNicyNy45Ilc!5e0!3m2!1sfr!2sma!4v1590447330748!5m2!1sfr!2sma" 
+		  class="maps-contact-size" allowfullscreen=""></iframe>
+        </div>
+		</div>
+		</section>
+		</div>
+		<div class="col-md-12 pad-lf-ri-0 st_con vh-3 bgaumk_white">
+		<div class="row pos-cnt-bt ">
+		<div class="contact-detail-map col-12 col-md-3 pad-lf-ri-0">
+     
+          <p> {{ md_block_contact.info_block_map_1.value|raw }}</p>
+		  <p><a onclick="meknes()">localiser l'agence </a></p>
+          
+		  
+		  
+        </div>
+				<div class="contact-detail-map col-12 col-md-3 pad-lf-ri-0">
+          
+          
+          <p> {{ md_block_contact.info_block_map_2.value|raw }}</p>
+		  <p><a onclick="hajeb()">localiser l'agence </a></p>
+		  
+		  
+		  
+        </div>
+				<div class="contact-detail-map col-12 col-md-3 pad-lf-ri-0">
+
+		  <p> {{ md_block_contact.info_block_map_3.value|raw }}</p>
+		  <p><a onclick="ifrane()">localiser l'agence </a></p>
+		  
+		  
+        </div>
+	<div class="row hide-mobile" style="width:100%;">
+		    <!-- Footer -->
+<footer class="page-footer font-small copyright-front menuGreen ftr_por">
+
+  <!-- Footer Links -->
+  <div class="text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left pt-3">
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ul-rs">
+        <p class="text-left pdf-40" > 	
+
+  © {{ "now"|date("Y") }} {{ site_slogan_cnt }}.
+            
+        </p>
+        <ul>
+            {% if md_block_contact.facebook %}
+          <li>
+            <a  href="{{ md_block_contact.facebook }}"><span class="icon"><i class="fab fa-facebook"> </i></span></a>
+          </li>{%  endif %}
+          {% if md_block_contact.twitter %}
+          <li>
+            <a  href="{{ md_block_contact.twitter }}"><span class="icon"><i class="fab fa-twitter"> </i></span></a>
+          </li>{%  endif %}
+          {% if md_block_contact.youtube %}
+          <li>
+              <a  href="{{ md_block_contact.youtube }}"><span class="icon"><i class="fab fa-youtube"></i></span></a>
+          </li>{%  endif %}
+{% if md_block_contact.insta %}
+         <li>
+             <a  href="{{ md_block_contact.insta }}"><span class="icon"><i class="fab fa-instagram"></i></span></a>
+        </li>{%  endif %}
+
+
+
+
+        </ul>
+		
+      </div>
+       <hr class="w-100 clearfix d-md-none">
+      <!-- Grid column -->
+      <div class="col-md-1 col-lg-1 col-xl-1 mx-auto">
+       <a  href="https://www.aunador.ma"><img src="{{ base_path ~ directory }}/images/QRCode.png" alt="{{ site_slogan_cnt }}" class="logo-qrcode"></a>
+		
+      </div>
+      <hr class="w-100 clearfix d-md-none">
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+       <a  href="https://www.iso.org"><img src="{{ base_path ~ directory }}/images/iso.png" alt="{{ site_slogan_cnt }}" class="logo-qrcode"></a>
+		
+      </div>
+       <hr class="w-100 clearfix d-md-none">
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+        <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_1 }}">{{ md_block_contact.cat_1_sub_menu1 }}</a>
+        </p>
+        <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_4 }}">{{ md_block_contact.cat_1_sub_menu4 }}</a>
+        </p>
+        <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_7 }}">{{ md_block_contact.cat_1_sub_menu7 }}</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+       
+        <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_2 }}">{{ md_block_contact.cat_1_sub_menu2 }}</a>
+        </p>
+       <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_5 }}">{{ md_block_contact.cat_1_sub_menu5 }}</a>
+        </p>
+        <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_8 }}">{{ md_block_contact.cat_1_sub_menu8 }}</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+      
+        <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_3 }}">{{ md_block_contact.cat_1_sub_menu3 }}</a>
+        </p>
+       <p class="ml-5 mb-0">
+          <a  href="{{ md_block_contact.cat_2_link_6 }}">{{ md_block_contact.cat_1_sub_menu6 }}</a>
+        </p>
+		
+      </div>
+	  
+
+      
+
+    </div>
+    <!-- Footer links -->
+
+   
+
+    <!-- Grid row -->
+    
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+</footer>
+<!-- Footer -->
+		 </div>
+		</div>
+		
+		</div>
+</div>
+
+<script>
+function meknes() {
+  document.getElementById("meknes").style.display = "block";
+  document.getElementById("hajeb").style.display = "none";
+  document.getElementById("ifrane").style.display = "none";
+}
+function hajeb() {
+  document.getElementById("meknes").style.display = "none";
+  document.getElementById("hajeb").style.display = "block";
+  document.getElementById("ifrane").style.display = "none";
+}
+function ifrane() {
+  document.getElementById("meknes").style.display = "none";
+  document.getElementById("hajeb").style.display = "none";
+  document.getElementById("ifrane").style.display = "block";
+}
+
+</script>
+
+			

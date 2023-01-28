@@ -1,0 +1,5 @@
+name: Agenda Homepage
+type: module
+description: Agenda.
+core_version_requirement: ^9.3 || ^10
+package: AU

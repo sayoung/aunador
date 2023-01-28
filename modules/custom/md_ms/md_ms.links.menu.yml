@@ -1,0 +1,17 @@
+ms.admin_ms:
+  title: 'Mot du Directeur'
+  description: 'Mot du Directeur'
+  parent: maps.admin_maps
+  route_name: ms.admin_ms
+
+ns.admin_ms:
+  title: 'Nos missions'
+  description: 'Nos missions'
+  parent: maps.admin_maps
+  route_name: ns.admin_ms
+  
+geo.admin_ms:
+  title: 'Géoportail'
+  description: 'Géoportail'
+  parent: maps.admin_maps
+  route_name: geo.admin_ms

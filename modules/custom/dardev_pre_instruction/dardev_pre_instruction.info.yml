@@ -1,0 +1,5 @@
+name: dardev_pre_instruction
+description: 'Gestion et Workflow Pre-instruction.'
+core_version_requirement: ^9.3 || ^10
+type: module
+package: Custom

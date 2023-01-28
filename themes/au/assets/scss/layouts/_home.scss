@@ -1,0 +1,489 @@
+.two-block {
+    background: url(../images/banner02.png) no-repeat top 7rem center;
+    background-size: cover;
+    padding: 0 0 2rem;
+    .img-hold {
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+    .slider-block {
+        .test-slider {
+            .text-hold {
+                padding: 30px 40px 30px 30px;
+                background: #f4f4f4;
+                width: 95%;
+                margin: 20px 0 0 10px;
+                @include max(1367px) {
+                    padding: 18px 40px 18px 30px;
+                    background: #f4f4f4;
+                    width: 95%;
+                    margin: 20px 0 0 10px;
+                }
+                @include max(1200px) {
+                    padding: 15px 20px 15px 20px;
+                }
+                @include max(992px) {
+                    margin: 20px 0 50px 10px;
+                }
+                h2 {
+                    font-size: 40px;
+                    line-height: 42px;
+                    color: #3c87e6;
+                    margin: 0 0 15px;
+                    @include max(1367px) {
+                        font-size: 30px;
+                        line-height: 32px;
+                    }
+                    @include max(1200px) {
+                        font-size: 20px;
+                        line-height: 22px;
+                        margin: 0 0 10px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #404040;
+                    margin: 0 0 20px;
+                    @include max(1367px) {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    @include max(1200px) {
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin: 0 0 10px;
+                    }
+                }
+                .ls-btn {
+                    font-size: 15px;
+                    line-height: 17px;
+                    padding: 15px 30px;
+                    background: #3c87e6 url(../images/line01.png) no-repeat right -6px center;
+                    border-radius: 10px;
+                    color: #fff;
+                    width: 150px;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &:hover {
+                        background: #5bba1c url(../images/line01.png) no-repeat right -6px center;
+                    }
+                }
+            }
+            .slick-dots {
+                left: auto;
+                right: 0;
+                bottom: 23px;
+                width: 50%;
+                @include max(1200px) {
+                    bottom: 15px;
+                }
+                @include max(992px) {
+                    width: 100%;
+                }
+                li {
+                    button {
+                        &::before {
+                            font-size: 18px;
+                            color: #f4f4f4;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .slick-active {
+                    button {
+                        &::before {
+                            color: #3c87e6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 32px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 15px 0 0;
+        @include max(575px) {
+            font-size: 25px;
+            line-height: 27px;
+        }
+    }
+    .w {
+        background: #fff !important;
+        
+    }
+}
+.small-block {
+    padding: 2rem 0;
+    @include max(575px) {
+        padding: 2rem 10px;
+    }
+    .img-holder {
+        padding: 10px;
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 7px;
+            box-shadow: 0 0 10px #0000003b;
+            position: relative;
+        }
+        
+    }
+    .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        content: "";
+        background: #00000060;
+        width: 94%;
+        height: 91%;
+        padding: 5px 10px;
+        margin: 10px;
+        border-radius: 7px;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+        @include max(1200px) {
+            width: 93%;
+            height: 87%;
+        }
+        @include max(1150px) {
+            width: 92%;
+            height: 87%;
+        }
+        @include max(992px) {
+            width: 94%;
+            height: 91%;
+        }
+        @include max(767px) {
+            width: 93%;
+            height: 89%;
+        }
+        @include max(575px) {
+            width: 89%;
+            height: 83%;
+        }
+        h3 {
+            font-size: 17px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #b2c375;
+            font-family: "MADEEvolveSans-Medium";
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            content: "";
+            background: #fff;
+            padding: 5px 10px;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+            @include max(1150px) {
+                font-size: 15px;
+                line-height: 17px;
+            }
+            @include max(575px) {
+                font-size: 13px;
+                line-height: 15px;
+                left: 10px;
+            }
+        }
+    }
+    .text:hover {
+        opacity: 1;
+    }
+    .text:hover h3 {
+        bottom: 20px;
+        opacity: 1;
+        @include max(575px) {
+            bottom: 15px;
+        }
+    }
+}
+.detail-block {
+    padding: 5rem 0;
+    background: url(../images/banner03.png) no-repeat;
+    background-size: cover;
+    @include max(992px) {
+        padding: 3rem 0;
+    }
+    .box {
+        background: #fff url(../images/bg03.png) no-repeat left -2.5rem center;
+        display: flex;
+        align-items: flex-end;
+        padding: 40px 30px 40px 60px;
+        flex-wrap: wrap;
+        @include max(1200px) {
+            padding: 40px 30px 40px 40px;
+            background: #fff url(../images/bg03.png) no-repeat left -6rem center;
+        }
+        @include max(1200px) {
+            padding: 20px 30px 20px 30px;
+        }
+        @include max(992px) {
+            margin: 0 0 20px;
+            background: #fff url(../images/bg03.png) no-repeat left -4rem center;
+        }
+        @include max(575px) {
+            background: #fff url(../images/bg03.png) no-repeat left -6rem center;
+        }
+        .img-hold {
+            width: 25%;
+            img {
+                border-radius: 5px;
+            }
+        }
+        .text-hold {
+            width: 75%;
+            padding: 0 0 0 30px;
+            @include max(1200px) {
+                padding: 0 0 0 20px;
+            }
+            h3 {
+                font-size: 35px;
+                line-height: 37px;
+                color: #3c87e6;
+                margin: 0 0 30px;
+                text-transform: uppercase;
+                @include max(1367px) {
+                    font-size: 28px;
+                    line-height: 30px;
+                    margin: 0 0 25px;
+                }
+                @include max(575px) {
+                    font-size: 20px;
+                    line-height: 22px;
+                    margin: 0 0 10px;
+                }
+            }
+            p {
+                font-size: 20px;
+                line-height: 28px;
+                color: #686a6f;
+                margin: 0 0 30px;
+                @include max(1367px) {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+                @include max(1367px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                @include max(575px) {
+                    font-size: 13px;
+                    line-height: 15px;
+                    margin: 0 0 10px;
+                }
+            }
+            .ls-btn {
+                font-size: 12px;
+                line-height: 14px;
+                padding: 15px 30px;
+                background: #3c87e6 url(../images/line01.png) no-repeat right -6px center;
+                border-radius: 10px;
+                color: #fff;
+                width: 130px;
+                text-transform: uppercase;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background: #5bba1c url(../images/line01.png) no-repeat right -6px center;
+                }
+            }
+        }
+    }
+    .icon-box {
+        background: #fff;
+        height: 175px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        &:hover {
+            background: #5bba1c;
+            h4 {
+                color: #fff;
+            }
+        }
+        img {
+            margin: 0 0 25px;
+        }
+        h4 {
+            font-size: 17px;
+            line-height: 19px;
+            font-family: 'MADEEvolveSans-Bold';
+            color: #606060;
+            text-transform: uppercase;
+            @include max(1280px) {
+                font-size: 15px;
+                line-height: 17px;
+            }
+            @include max(1200px) {
+                font-size: 13px;
+                line-height: 15px;
+            }
+        }
+        @include max(1200px) {
+            height: 143px;
+            padding: 15px 15px;
+            img {
+                height: 50px;
+            }
+        }
+        @include max(575px) {
+            height: 120px;
+            img {
+                height: 35px;
+            }
+        }
+    }
+} 
+.three-block {
+    padding: 5rem 0;
+    @include max(992px) {
+        padding: 3rem 0;
+    }
+    .img-box {
+        background: #fff;
+        padding: 7px;
+        box-shadow: 0 0 7px #00000091;
+    }
+    .modi {
+        height: 100%;
+        position: relative;
+        img {
+            height: 100%;
+        }
+        .capation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h3 {
+                font-size: 35px;
+                line-height: 33px;
+                color: #fff;
+                font-family: 'MADEEvolveSans-Bold';
+                text-align: center;
+                text-transform: uppercase;
+                @include max(1200px) {
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+    .tab-content {
+        .nav {
+            li {
+                width: 33.33%;
+                button {
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 0;
+                    font-family: 'MADEEvolveSans-Bold';
+                    font-size: 30px;
+                    line-height: 32px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    background: #77cc3e;
+                    @include max(1367px) {
+                        font-size: 25px;
+                        line-height: 27px;
+                    }
+                    @include max(575px) {
+                        font-size: 16px;
+                        line-height: 20px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        .tab-pane {
+            height: 415px;
+            @include max(1367px) {
+                height: 350px;
+            }
+            @include max(1200px) {
+                height: 282px;
+            }
+            @include max(992px) {
+                height: 350px;
+                margin: 15px 0 0;
+            }
+        }
+        .active#pills-home-tab {
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -15px;
+                left: 0;
+                right: 0;
+                content: "";
+                bottom: auto;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 25px 30px 25px;
+                border-color: transparent transparent #77cc3e transparent;
+                margin: 0 auto;
+            }
+        }
+        .active#pills-profile-tab {
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -15px;
+                left: 0;
+                right: 0;
+                content: "";
+                bottom: auto;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 25px 30px 25px;
+                border-color: transparent transparent #5bba1c transparent;
+                margin: 0 auto;
+            }
+        }
+        .active#pills-contact-tab {
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -15px;
+                left: 0;
+                right: 0;
+                content: "";
+                bottom: auto;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 25px 30px 25px;
+                border-color: transparent transparent #51a11c transparent;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+

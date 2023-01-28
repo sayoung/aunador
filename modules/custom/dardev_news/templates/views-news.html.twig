@@ -1,0 +1,50 @@
+<section class="two-block">
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-md-12 col-lg-12">
+				<div class="slider-block">
+					<div class="test-slider{% if lang == "ar" %}-rtl{%else%}{%endif%}">
+						{% for key, row in rows   %}
+						<div>
+							<div class="row">
+								<div class="col-md-12 col-lg-6 pe-0">
+									<div class="img-hold">
+										<img src="{% if row.image %}{% apply spaceless %}{{ row.image|render|striptags }}{% endapply %}{% endif %}" alt="{% apply spaceless %}{{row.title|render|striptags|raw}}{% endapply %}">
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-6 w">
+									<div class="text-hold">
+										<h2>
+											{% apply spaceless %}{{row.title|render|striptags|raw}}{% endapply %}
+										</h2>
+										{% set text = row.body|render|striptags %}
+										<p>
+
+											{{ text|length > 400 ? text|slice(0, 400)|raw ~ '....' : text|raw }}
+										</p>
+										<a href="{% apply spaceless %}{{ row.url|render|striptags }}{% endapply %}" class="btn ls-btn">{{"Lire suite"|t}}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Services aux citoyens</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+

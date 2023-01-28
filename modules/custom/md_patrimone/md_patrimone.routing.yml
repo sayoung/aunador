@@ -1,0 +1,7 @@
+echo.content:
+  path: '/notre-patrimone' 
+  defaults: 
+    _controller: 'Drupal\md_patrimone\Controller\PatrimoineController::getPatrimoine' 
+    _title: 'Notre patrimone'
+  requirements: 
+    _permission: 'access content' 

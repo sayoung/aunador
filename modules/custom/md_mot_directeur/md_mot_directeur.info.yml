@@ -1,0 +1,5 @@
+name: Mot du directeur en Acceuil
+type: module
+description: Type de contenu mot du directeur.
+core_version_requirement: ^9.3 || ^10
+package: Custom

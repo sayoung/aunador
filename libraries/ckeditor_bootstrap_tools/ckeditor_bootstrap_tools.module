@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Main code for CKEditor Bootstrap Tools module.
+ */
+
+/**
+ * Implements hook_ckeditor_plugin().
+ */
+function ckeditor_bootstrap_tools_ckeditor_plugin() {
+  return array(
+    'jsplusBootstrapTools' => array(
+      'name' => 'jsplusBootstrapTools',
+      'desc' => t('CKEditor Bootstrap Tools. See <a href=":addon_page_url">@addon_page_title</a> for more details.',
+        array(
+          ':addon_page_url' => 'https://js.plus/products/bootstrap-tools',
+          '@addon_page_title' => t('addon page'),
+        )),
+      'path' => base_path() . 'libraries/jsplusBootstrapTools'
+    ),
+  );
+}

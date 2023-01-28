@@ -1,0 +1,29 @@
+<!--Tab-->
+<div class="tab active-tab" id="tab-1">
+	<div class="row clearfix">
+		<div class="tab-col col-lg-12 col-md-12 col-sm-12">
+			<div class="inner">
+				<div class="accordion-box">
+					<!--Block-->
+					{% for key, row in rows   %}
+					<div class="accordion block">
+						<div class="acc-btn">{% apply spaceless %}{{row.title|render|striptags|raw}}{% endapply %}
+							<div class="icon flaticon-cross"></div>
+						</div>
+						<div class="acc-content">
+							<div class="content">
+								<div class="text">{{ row.contenu }}</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+<!--Tab-->

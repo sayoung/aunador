@@ -1,0 +1,11 @@
+document.admin_document:
+  title: 'E-document'
+  description: ''
+  parent: maps.admin_maps
+  route_name: document.admin_document
+  
+document.worflow_document:
+  title: 'E-document Workflow'
+  description: ''
+  parent: maps.admin_maps
+  route_name: document.admin_document
