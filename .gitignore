@@ -6,6 +6,7 @@
 # https://www.drupal.org/docs/develop/using-composer
 
 # Ignore configuration files that may contain sensitive information
+/sites
 /sites/*/*settings*.php
 /sites/*/*services*.yml
 
